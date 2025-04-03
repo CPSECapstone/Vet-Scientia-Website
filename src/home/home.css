@@ -1,0 +1,14 @@
+.home-header {
+  text-align: center;
+  font-size: 3rem;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
