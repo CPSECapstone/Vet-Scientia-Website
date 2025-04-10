@@ -1,7 +1,7 @@
 import "./styles.css";
 import createHome from "./home/home.js";
 import createUserGuide from "./user_guide/user_guide.js";
-import createlicensing from "./licensing/licensing.js";
+import createLicensing from "./licensing/licensing.js";
 
 function removeClickedStylingFromTabs() {
   for (const tab of document.querySelectorAll("nav>*")) {
@@ -11,7 +11,7 @@ function removeClickedStylingFromTabs() {
 
 export const pageContent = document.querySelector("#content");
 
-let lastTabClicked = "home";
+let lastTabClicked = "licensing";
 function clearPageContent() {
   while (pageContent.firstChild) {
     pageContent.removeChild(pageContent.lastChild);
@@ -47,7 +47,7 @@ licensingButton.addEventListener("click", () => {
     removeClickedStylingFromTabs();
     licensingButton.classList.add("last-clicked");
     clearPageContent();
-    createlicensing();
+    createLicensing();
   }
 });
 
@@ -66,5 +66,5 @@ domReady(() => {
   document.body.style.visibility = "visible";
 });
 
-homeButton.classList.add("last-clicked");
-createHome();
+licensingButton.classList.add("last-clicked");
+createLicensing();
