@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./styles.sass";
 import createHome from "./home/home.js";
 import createUserGuide from "./user_guide/user_guide.js";
 import createLicensing from "./licensing/licensing.js";
