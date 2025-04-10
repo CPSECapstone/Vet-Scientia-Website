@@ -1,4 +1,4 @@
-[Vet Scientia Website](https://cpsecapstone.github.io/Vet-Scientia-Website/)
+[Vet Scientia Website](https://main.d2q1vfnocl72y0.amplifyapp.com/)
 
 **To start dev:**\
 npm start\
