@@ -5,7 +5,6 @@ author: "Vet Scientia Team"
 format: 
    html:
      embed-resources: true
-     code-tools: true
      toc: true
      toc-depth: 3
      number-sections: true
@@ -17,27 +16,55 @@ execute:
   warning: false
 ---
 
-## Introduction
+# Introduction
 
 The following document is a guide for students, teachers and admins alike to guide users on how to create an account, login, and use the features of our vet simulator
+
+# Web Portal
 
 ##  Account Management
 
 ### Sign-up
 
-1. Navigate to the [sign-up page](https://gray-bush-0c1bf981e.6.azurestaticapps.net/signup) of our application
-2. Enter in your credentials:
-    1. First Name (Real name)
-    2. Last Name (Real name)
-    
+1. Ask your administrator to register you into the system and provide them with your `full name` and `email address`.
+    - For university admins, please contact the super admin.
+    - For teachers, please contact your university admin.
+    - For students, please contact your teacher.
+    - Super admins will be given their credentials.
+2. Navigate to the [sign-up page](https://gray-bush-0c1bf981e.6.azurestaticapps.net/signup) of our application
+
+![](../assets/signup/signup1.png)
+
+3. Enter in your credentials:
+
+    1. First Name (Must match what you provided with your admin)
+    2. Last Name (Must match what you provided with your admin)
     3. Email (Must use university/clinic email if domain checking is turned on for your organization)
-    4.
+    4. Password with the following requirements 
+        1. Must be at minimum 8 characters long.
+        2. Must **NOT** include your name.
+        3. Must have at least one symbol and numeric character.
+        4. Must have at least one capital and one lowercase character.
+    5. Access Code for the organization
+
+![](../assets/signup/signup2.png)
+
+4. Click `Sign-up`
 
 ### Login
+
+1. Navigate to the [login page]()
+2. Enter your email and password
+3. Click `login`
 
 ## Super Admin
 
 ## University Admin
+
+After signing in as a university admin you will be brought to the primary dashboard for an university admin
+
+
+# Simulation
 
 ## Using the Simulator
 Test out using the simulation with [Vet Scientia Demo](https://vs-capstone.itch.io/vs-demo).
