@@ -1,8 +1,9 @@
 [Vet Scientia Website](https://cpsecapstone.github.io/Vet-Scientia-Website/)
 
-To start dev:
+To start dev:\
 npm start\
 open http://localhost:8080/
+\
 
 To deploy:
 
