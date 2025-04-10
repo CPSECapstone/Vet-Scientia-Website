@@ -11,7 +11,7 @@ function removeClickedStylingFromTabs() {
 
 export const pageContent = document.querySelector("#content");
 
-let lastTabClicked = "licensing";
+let lastTabClicked = "home";
 function clearPageContent() {
   while (pageContent.firstChild) {
     pageContent.removeChild(pageContent.lastChild);
@@ -66,5 +66,5 @@ domReady(() => {
   document.body.style.visibility = "visible";
 });
 
-licensingButton.classList.add("last-clicked");
-createLicensing();
+homeButton.classList.add("last-clicked");
+createHome();
