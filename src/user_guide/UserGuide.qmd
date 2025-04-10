@@ -1,0 +1,40 @@
+---
+title: "User Guide"
+date: "April 10, 2025"
+author: "Vet Scientia Team"
+format: 
+   html:
+     embed-resources: true
+     code-tools: true
+     toc: true
+     toc-depth: 3
+     number-sections: true
+editor: source
+execute: 
+  error: true
+  echo: true
+  message: false
+  warning: false
+---
+
+## Introduction
+
+The following document is a guide for students, teachers and admins alike to guide users on how to create an account, login, and use the features of our vet simulator
+
+##  Account Management
+
+### Sign-up
+
+1. Navigate to the [sign-up page](https://gray-bush-0c1bf981e.6.azurestaticapps.net/signup) of our application
+2. Enter in your credentials:
+    1. First Name (Real name)
+    2. Last Name (Real name)
+    
+    3. Email (Must use university/clinic email if domain checking is turned on for your organization)
+    4.
+
+### Login
+
+## Super Admin
+
+## University Admin
