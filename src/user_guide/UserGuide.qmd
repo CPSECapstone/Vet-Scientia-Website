@@ -87,7 +87,7 @@ Ex : `@calpoly.edu`
 
 #### Removing an Instructor
 
-::: {.callout-caution collapse="true"}
+::: {.callout-caution}
 
 There is currently **NO** confirmation for deletion of a teacher.  Please delete with caution
 :::
@@ -113,16 +113,86 @@ This section indicates the current payment method used for paying for the subscr
 Displays the past payment history for this university such as previous year subscription costs and the number of seats purchased for that subscription.
 
 ### Domains
+
+::: {.callout-note collapse="true"}
+
+While the frontend implementation of this feature has been implemented the backend part is not, therefore this rule is not enforced 
+:::
+
+This page allows the university admins to turn on and off domain checking 
+Each row will display the domain, and whether its allowed in this organization.
+
 ### Seats
 
-Furthermore, you can view Feedback and Questions through tabs on the navbar
+This page will show the total numbers of seats purchased by the organization and the number of open seats available for students.
 
+
+### Feedback
+
+This tab allows an university admin to view feedback from students and teachers in the organization. On the top you can view the total number of teachers, students and comments posted in the university.
+
+The feedback table provides an overview of the latest feedback from students and teachers.
+
+#### Columns of the Feedback Table 
+- Name
+: Name of the user who posted the feedback
+- Role
+: Role of the user who posted the feedback
+- Comment
+: Message of the feedback
+- Simulation
+: The simulation this ticket is related to
+
+### Questions
 
 
 ## Teacher
 
 ## Student
 
+After logging in as a student, you will be brought the student dashboard where you can view, play around with and complete simulation assignments, view reports on previous simulation attempts, interact with other students and instructors through discussion, provide feedback and edit/manage user profile.
+
+### Main Course Dashboard
+
+The main course dashboard provides an overview of all the courses you are enrolled in and have added to your dashboard. Click the course to select the course to view its assignments and complete its simulation.
+
+::: {.callout-note }
+
+The details pane of the course is not implemented, clicking it, will link to the same page as the rest of the card
+
+:::
+
+
+#### Adding a Course
+
+::: {.callout-note }
+
+Currently adding courses is only implemented in the frontend. No backend services are deployed to support adding courses to the database
+:::
+
+1. Click `Join Class`
+2. Enter in the access code provided to you by your instructor.
+
+### Assignments
+
+The assignment page will be the first page you land on when you select a curse.  It gives an overview of all the available assignments in the courses including those completed, upcoming and available to practice 
+
+- ToDo
+: A carousel of assignments that are due soon and are suggested to be completed.
+- Upcoming Assignments
+: Assignments that are published but not due in the immediate future.
+- Completed Assignments
+: Assignments that are completed and results \(can possibly\) be viewed.
+
+#### Activating the Simulation Screen
+
+1. Select the button on the assignment with the number of days till due \(Ex : `1 day`\)
+2. Click `Start`
+3. Wait for the simulation to load and once loaded refer to [Simulation](#simulation) for how to interact with the VetSim
+
+### Discussion Board
+
+### Dashboard Feedback
 
 # Simulation
 
