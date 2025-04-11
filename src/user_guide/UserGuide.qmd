@@ -62,7 +62,66 @@ The following document is a guide for students, teachers and admins alike to gui
 
 ## University Admin
 
-After signing in as a university admin you will be brought to the primary dashboard for an university admin
+After signing in as a university admin you will be brought to the primary dashboard for an university admin.  You will be presented with 4 main managerial options.
+
+### Users
+
+This page is to allow a university admin to view all teachers currently enrolled in a particular university.
+
+Each entry will display the instructor's name and number of seats assigned to an instructor.
+
+#### Adding to a Instructor 
+
+1. Click `+ Add Teacher` on the top right hand corner of the page
+2. Enter in the following credentials for the instructor
+    1. Their first name
+    2. Their last name
+    3. Their email address [^1]
+    4. The number of seats for that instructor 
+
+3. Click `Submit`
+
+
+[^1]: If domain checking is enabled in this organization then an email address must match the current's organization domain.  
+Ex : `@calpoly.edu`
+
+#### Removing an Instructor
+
+::: {.callout-caution collapse="true"}
+
+There is currently **NO** confirmation for deletion of a teacher.  Please delete with caution
+:::
+
+1. Scroll to the row with the instructor you would like to remove.
+
+2. Click the trash on the row of the instructor.
+ 
+### Billing
+
+The billing tab allows an university admin to manage the university billing history and options.
+
+#### Subscription Details
+
+Highlights the current enrolled plan, number of seats provided for the plan,cost for an yearly subscription and when the subscription ends.
+
+#### Payment Method
+
+This section indicates the current payment method used for paying for the subscription. This card will be used for purchasing additional seta or auto-renewal once those features are implemented  
+
+#### Invoice History
+
+Displays the past payment history for this university such as previous year subscription costs and the number of seats purchased for that subscription.
+
+### Domains
+### Seats
+
+Furthermore, you can view Feedback and Questions through tabs on the navbar
+
+
+
+## Teacher
+
+## Student
 
 
 # Simulation
