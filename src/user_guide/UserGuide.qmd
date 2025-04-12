@@ -2,6 +2,7 @@
 title: "User Guide"
 date: "April 10, 2025"
 author: "Vet Scientia Team"
+version: "Alpha"
 css: ../styles.css
 format: 
    html:
@@ -19,11 +20,11 @@ execute:
 
 # Introduction
 
-The following document is a guide for students, teachers and admins alike to guide users on how to create an account, login, and use the features of our vet simulator
+The following document is a guide for students, teachers, and admins alike to guide users on how to create an account, log in, and use the features of our vet simulator.
 
 # Web Portal
 
-##  Account Management
+## Account Management
 
 ### Sign-up
 
@@ -32,64 +33,63 @@ The following document is a guide for students, teachers and admins alike to gui
     - For teachers, please contact your university admin.
     - For students, please contact your teacher.
     - Super admins will be given their credentials.
-2. Navigate to the [sign-up page](https://gray-bush-0c1bf981e.6.azurestaticapps.net/signup) of our application
+2. Navigate to the [sign-up page](https://gray-bush-0c1bf981e.6.azurestaticapps.net/signup) of our application.
 
 ![](../assets/signup/signup1.png)
 
 3. Enter in your credentials:
 
-    1. First Name (Must match what you provided with your admin)
-    2. Last Name (Must match what you provided with your admin)
-    3. Email (Must use university/clinic email if domain checking is turned on for your organization)
-    4. Password with the following requirements 
+    1. First Name (Must match what you provided with your admin.)
+    2. Last Name (Must match what you provided with your admin.)
+    3. Email (Must use university/clinic email if domain checking is turned on for your organization.)
+    4. Password with the following requirements: 
         1. Must be at minimum 8 characters long.
         2. Must **NOT** include your name.
         3. Must have at least one symbol and numeric character.
         4. Must have at least one capital and one lowercase character.
-    5. Access Code for the organization
+    5. Access Code for the organization.
 
 ![](../assets/signup/signup2.png)
 
-4. Click `Sign-up`
+4. Click `Sign-up`.
 
 ### Login
 
-1. Navigate to the [login page]()
-2. Enter your email and password
-3. Click `login`
+1. Navigate to the [login page]().
+2. Enter your email and password.
+3. Click `login`.
 
 ## Super Admin
 
 ## University Admin
 
-After signing in as a university admin you will be brought to the primary dashboard for an university admin.  You will be presented with 4 main managerial options.
+After signing in as a university admin, you will be brought to the primary dashboard for a university admin. You will be presented with 4 main managerial options.
 
 ### Users
 
 This page is to allow a university admin to view all teachers currently enrolled in a particular university.
 
-Each entry will display the instructor's name and number of seats assigned to an instructor.
+Each entry will display the instructor's name and the number of seats assigned to an instructor.
 
-#### Adding to a Instructor 
+#### Adding to an Instructor 
 
-1. Click `+ Add Teacher` on the top right hand corner of the page
-2. Enter in the following credentials for the instructor
-    1. Their first name
-    2. Their last name
-    3. Their email address [^1]
-    4. The number of seats for that instructor 
+1. Click `+ Add Teacher` on the top right-hand corner of the page.
+2. Enter in the following credentials for the instructor:
+    1. Their first name.
+    2. Their last name.
+    3. Their email address. [^1]
+    4. The number of seats for that instructor.
 
-3. Click `Submit`
+3. Click `Submit`.
 
-
-[^1]: If domain checking is enabled in this organization then an email address must match the current's organization domain.  
-Ex : `@calpoly.edu`
+[^1]: If domain checking is enabled in this organization, then an email address must match the current organization's domain.  
+Ex: `@calpoly.edu`.
 
 #### Removing an Instructor
 
 ::: {.callout-caution}
 
-There is currently **NO** confirmation for deletion of a teacher.  Please delete with caution
+There is currently **NO** confirmation for deletion of a teacher. Please delete with caution.
 :::
 
 1. Scroll to the row with the instructor you would like to remove.
@@ -98,59 +98,64 @@ There is currently **NO** confirmation for deletion of a teacher.  Please delete
  
 ### Billing
 
-The billing tab allows an university admin to manage the university billing history and options.
+The billing tab allows a university admin to manage the university billing history and options.
 
 #### Subscription Details
 
-Highlights the current enrolled plan, number of seats provided for the plan,cost for an yearly subscription and when the subscription ends.
+Highlights the current enrolled plan, the number of seats provided for the plan, the cost for a yearly subscription, and when the subscription ends.
 
 #### Payment Method
 
-This section indicates the current payment method used for paying for the subscription. This card will be used for purchasing additional seta or auto-renewal once those features are implemented  
+This section indicates the current payment method used for paying for the subscription. This card will be used for purchasing additional seats or auto-renewal once those features are implemented.  
 
 #### Invoice History
 
-Displays the past payment history for this university such as previous year subscription costs and the number of seats purchased for that subscription.
+Displays the past payment history for this university, such as previous year subscription costs and the number of seats purchased for that subscription.
 
 ### Domains
 
 ::: {.callout-note collapse="true"}
 
-While the frontend implementation of this feature has been implemented the backend part is not, therefore this rule is not enforced 
+While the frontend implementation of this feature has been implemented, the backend part is not. Therefore, this rule is not enforced.
 :::
 
-This page allows the university admins to turn on and off domain checking 
-Each row will display the domain, and whether its allowed in this organization.
+This page allows the university admins to turn on and off domain checking.  
+Each row will display the domain and whether it's allowed in this organization.
 
 ### Seats
 
-This page will show the total numbers of seats purchased by the organization and the number of open seats available for students.
-
+This page will show the total number of seats purchased by the organization and the number of open seats available for students.
 
 ### Feedback
 
-This tab allows an university admin to view feedback from students and teachers in the organization. On the top you can view the total number of teachers, students and comments posted in the university.
+::: {.callout-note}
+Please refer to [student-feedback](#dashboard-feedback) for backend status of this feature
+:::
+
+
+This tab allows a university admin to view feedback from students and teachers in the organization. On the top, you can view the total number of teachers, students, and comments posted in the university.
 
 The feedback table provides an overview of the latest feedback from students and teachers.
 
 #### Columns of the Feedback Table 
-- Name
-: Name of the user who posted the feedback
-- Role
-: Role of the user who posted the feedback
-- Comment
-: Message of the feedback
-- Simulation
-: The simulation this ticket is related to
+- Name:
+: Name of the user who posted the feedback.
+- Role:
+: Role of the user who posted the feedback.
+- Comment:
+: Message of the feedback.
+- Simulation:
+: The simulation this ticket is related to.
 
 ### Questions
 
-
 ## Teacher
+
+After logging in as a teacher you will be directed to a teacher dashboard where you can create and manage your vet classes, create, view and grade student performed vet-simulations and interact with students  
 
 ## Student
 
-After logging in as a student, you will be brought the student dashboard where you can view, play around with and complete simulation assignments, view reports on previous simulation attempts, interact with other students and instructors through discussion, provide feedback and edit/manage user profile.
+After logging in as a student, you will be brought to the student dashboard where you can view, play around with, and complete simulation assignments, view reports on previous simulation attempts, interact with other students and instructors through discussion, provide feedback, and edit/manage your user profile.
 
 ### Main Course Dashboard
 
@@ -158,45 +163,141 @@ The main course dashboard provides an overview of all the courses you are enroll
 
 ::: {.callout-note }
 
-The details pane of the course is not implemented, clicking it, will link to the same page as the rest of the card
+The details pane of the course is not implemented. Clicking it will link to the same page as the rest of the card.
 
 :::
-
 
 #### Adding a Course
 
 ::: {.callout-note }
 
-Currently adding courses is only implemented in the frontend. No backend services are deployed to support adding courses to the database
+Currently, adding courses is only implemented in the frontend. No backend services are deployed to support adding courses to the database.
 :::
 
-1. Click `Join Class`
+1. Click `Join Class`.
 2. Enter in the access code provided to you by your instructor.
+
+### Navigating the Student Dashboard 
+
+Once you have selected a course, you will have a variety of accessible pages which can be navigated between using the left-hand side nav bar.
+
+You can always return to the courses page by clicking `dashboard`, the red scholar icon, or the [student dashboard URL](https://gray-bush-0c1bf981e.6.azurestaticapps.net/student-dashboard/main-courses).
 
 ### Assignments
 
-The assignment page will be the first page you land on when you select a curse.  It gives an overview of all the available assignments in the courses including those completed, upcoming and available to practice 
+The assignment page will be the first page you land on when you select a course. It gives an overview of all the available assignments in the courses, including those completed, upcoming, and available to practice.
 
-- ToDo
-: A carousel of assignments that are due soon and are suggested to be completed.
-- Upcoming Assignments
-: Assignments that are published but not due in the immediate future.
-- Completed Assignments
-: Assignments that are completed and results \(can possibly\) be viewed.
+- ToDo:
+  A carousel of assignments that are due soon and are suggested to be completed.
+- Upcoming Assignments:
+  Assignments that are published but not due in the immediate future.
+- Completed Assignments:
+  Assignments that are completed and results \(can possibly\) be viewed.
 
 #### Activating the Simulation Screen
 
-1. Select the button on the assignment with the number of days till due \(Ex : `1 day`\)
-2. Click `Start`
-3. Wait for the simulation to load and once loaded refer to [Simulation](#simulation) for how to interact with the VetSim
+1. Select the button on the assignment with the number of days till due \(Ex: `1 day`\).
+2. Click `Start`.
+3. Wait for the simulation to load, and once loaded, refer to [Simulation](#simulation) for how to interact with the VetSim.
 
 ### Discussion Board
 
+The discussion board is an interactive area where students can discuss and get help with assignments & simulations.
+
+::: {.callout-note }
+Sorting and filtering features will be added to future releases. 
+:::
+
+Each post displayed will have the following information:
+
+- Author:
+  User who wrote the post.
+- Date Posted:
+  Date-time when the post was created.
+- Post Details:
+  Paragraph\(s\) containing the student/instructor posts.
+- Tags:
+  Variety of different categories this post has topics related to.
+- Number Of Likes:
+  Number of users who have liked this post.
+- Number of Comments:
+  Number of replies to this post.
+
+#### Generating a New Post
+
+To create a new post:
+
+1. Click `New Post`.
+2. Give the new post a title.
+3. Type in your question and topic of interest to discuss.
+4. \[Optional\] You can add tags to associate this post with a category such as a particular simulation/animal.
+
+    1. Click `Add Tag`.
+    2. Either: 
+        - Select from one of the preexisting tags by scrolling to it or typing and autocompleting the desired tag.
+        - Type in a new tag into the text entry field.
+    3. Repeat for as many tags as desired.
+
+5. Click `Post`.
+6. You will be redirected back to the primary discussion page with your newly created post at the bottom of the page.
+
+#### Viewing Replies
+
+To view a reply to a post, simply click the title of the post you are interested in.
+
+#### Creating a Reply
+
+There are two ways to reply to a post:
+
+1. Click the comment button on the left side of the post.
+2. Expand the post comment section and click `Reply`.
+
 ### Dashboard Feedback
+
+::: {.callout-note }
+
+- Only the frontend part of this feature has been completed. Please use our Jira page to provide bug reports for the current alpha release.
+- In the future, both instructors and students will have access to a feedback portal to submit feedback.
+
+:::
+
+The dashboard feedback area allows students to submit bugs, new feature requests, and other feedback to system administrators and VetScientia super admin. Feedback is tracked in the form of tickets and can be created/viewed through the portal.
+
+#### Creating a New Feedback
+
+::: {.callout-warning }
+This feature does not save the feedback currently. An error will occur while doing so. This is actively being worked on and should be implemented by the next release.
+:::
+
+1. Click `Add Feedback` on the top right-hand corner of the page.
+2. Type in the desired bug or feedback.
+3. Click `Submit Feedback`.
+
+#### Filtering Feedback Responses
+
+Use the two drop-down menus on the top-left of the feedback page to filter out only relevant tickets.
+
+- Status:
+  Filters feedback tickets by their last known status.
+
+        - Waiting for Response:
+          The ticket has been submitted and is in a queue waiting to be processed by a university, organizational, or super admin.
+        - In Progress:
+          The ticket has been seen, and a fix is actively being worked on.
+        - Resolved:
+          The requested issue has been resolved.
+
+- Topic:
+  The topic this feedback ticket is related to \(Ex: `Simulations`\).
+
+Once the wanted filters have been selected, click `Search` to apply the filters.
+
+To clear the filters, click `Clear Filters`.
 
 # Simulation
 
 ## Using the Simulator
+
 Test out using the simulation with [Vet Scientia Demo](https://vs-capstone.itch.io/vs-demo).
 
 To focus on the animal, click the animal.
@@ -207,7 +308,7 @@ To exit focus on any object, click the back button located towards the bottom of
 
 To examine the drugs, click the cabinet on the left.
 
-To look at the name of the a drug, hover over the drug.
+To look at the name of a drug, hover over the drug.
 
 To equip a drug, click the drug bottle.
 

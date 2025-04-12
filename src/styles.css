@@ -74,3 +74,29 @@ body {
 #quarto-margin-sidebar nav#TOC {
   padding-right: 1rem;
 }
+
+/* Align the entire title block flush left */
+.quarto-title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Ensure the title stays left-aligned and doesn't center */
+.quarto-title-banner .title {
+  flex: 1;
+  text-align: left;
+  margin: 0;
+  max-width: none;
+}
+
+/* Push author info to the far right */
+.quarto-title-banner .quarto-title-meta {
+  flex: 0 0 auto;
+  margin-left: auto;
+  text-align: right;
+}
