@@ -1,0 +1,53 @@
+---
+title: "Deployment Guide"
+date: "today"
+author: "Vet Scientia Team"
+version: "Alpha"
+css: ../styles.css
+format: 
+   html:
+     embed-resources: true
+     toc: true
+     toc-depth: 3
+     number-sections: true
+editor: source
+execute: 
+  error: true
+  echo: true
+  message: false
+  warning: false
+---
+
+# Introduction
+
+The following document aimed for system administrators and developers to guide them through the installation and deployment of our application
+
+# Web Portal
+
+## Prerequisites 
+
+## Installation Locally
+
+## Deployment on the Cloud
+
+# Simulation
+
+## Using the Simulator
+
+Test out using the simulation with [Vet Scientia Demo](https://vs-capstone.itch.io/vs-demo).
+
+To focus on the animal, click the animal.
+
+To check the animal's vitals, focus on the animal and then hover over the animal. You will see a popup of the vitals like heart rate and respiratory rate.
+
+To exit focus on any object, click the back button located towards the bottom of the screen.
+
+To examine the drugs, click the cabinet on the left.
+
+To look at the name of a drug, hover over the drug.
+
+To equip a drug, click the drug bottle.
+
+To get a short description of the drug, click the thumbnail of the drug.
+
+To apply a drug to the animal, equip the drug, focus on the animal, and then click the animal. The drug thumbnail should disappear.
