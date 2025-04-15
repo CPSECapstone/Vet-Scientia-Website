@@ -3,11 +3,17 @@ body {
   margin: 0;
 }
 
-nav {
+nav{
   display: flex;
   gap: 50px;
-  grid-column-start: 2;
 }
+
+.navBar-Div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
 
 button {
   width: 150px;
@@ -36,15 +42,14 @@ button:hover {
 }
 
 header {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 50px;
-  min-width: fit-content;
-  height: min-content;
   margin: 30px;
+  padding: 0 50px;
+  flex-wrap: wrap;
 }
+
 
 #project-name {
   grid-column-start: 1;
