@@ -18,6 +18,9 @@ export default function createUserGuide() {
       header.classList.add("user-guide-header");
       pageContent.appendChild(header);
 
+      const scripts = userGuide.querySelectorAll('script[type="module"]');
+      scripts.forEach(script => userGuide.removeChild(script));
+
       while (userGuide.firstChild) {
         const element = userGuide.firstChild;
 
@@ -29,13 +32,25 @@ export default function createUserGuide() {
           } else {
             script.textContent = element.textContent;
           }
+          try{
+            if (typeof window[scriptName] === "undefined") {
+          script.setAttribute("data-loaded-by", "quarto");
           document.head.appendChild(script);
+          console.log("script added", script);
+            }
+          } catch (error) {
+            userGuide.removeChild(element);
+            continue
+          }
         }
+        try{
         pageContent.appendChild(element);
+        } catch (error) {
+          userGuide.removeChild(element);
+        }
       }
     })
     .catch((error) => {
       console.error("Error loading user guide:", error);
     });
 }
-

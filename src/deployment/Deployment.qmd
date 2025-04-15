@@ -113,7 +113,7 @@ Afterwards,
 2. Make a new file and name it `.env`
 3. Paste in the credentials related to `VITE_APP_BASE_URL` in the format `VITE_APP_BASE_URL=<value>` where the `<value>` represents the credentials obtained 
 
-    ``` js
+    ``` 
     VITE_APP_BASE_URL="https://xyz.com:8080/"
     ```
 
@@ -121,7 +121,7 @@ Afterwards,
 5. Create another file name `.env`
 6. Paste in obtained credentials related to `MONGODB_URI`, `PORT`, and `SECRET_KEY` in the same format `<variable>=<value>`
 
-    ``` js
+    ```
     MONGODB_URI=MONGO_DATABASE_URL
     PORT=PORT_NUMBER_FOR_EXPRESS_SERVER
     SECRET_KEY=VERY_SECRET_KEY
@@ -211,8 +211,12 @@ Change to the `./dist` folder. Then, in the terminal run `python3 -m http.server
 Our web application will be hosted on a mixture of AWS and Azure infostracuture 
 By default if you commit code to the `CPSECapstone/VS-Frontend` or `CPSECapstone/VS-Frontend` main branch or make a PR to the main branch changes will automatically get deployed to our Azure services
 
-### Deployment of the Frontend Using Azure Static Web App
+::: {.callout-note}
+Before starting to deploy, please ensure you have administrator access to the repository or organization.  If not please contact your repo/organization owner to grant you permission before continuing.
+Furthermore, some of the steps below will require editing `.yaml` files and its a lot easier if have write access to the `main` branch instead of pushing changes through a separate branch and merging them through PRs.
+:::
 
+### Deployment of the Express Backend using Azure Web App
 1. Head to [Azure site](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account/search?ef_id=_k_CjwKCAjw5PK_BhBBEiwAL7GTPYLqxR0heIP7vCOIo1s7IK8PdeRPmQo3IdrYagaZghn1olndJkjdABoCOrcQAvD_BwE_k_&OCID=AIDcmmfq865whp_SEM__k_CjwKCAjw5PK_BhBBEiwAL7GTPYLqxR0heIP7vCOIo1s7IK8PdeRPmQo3IdrYagaZghn1olndJkjdABoCOrcQAvD_BwE_k_&gad_source=1&gbraid=0AAAAADcJh_tgWDQhaNlmVCfX0GJ6Km5si&gclid=CjwKCAjw5PK_BhBBEiwAL7GTPYLqxR0heIP7vCOIo1s7IK8PdeRPmQo3IdrYagaZghn1olndJkjdABoCOrcQAvD_BwE) 
 2. Click `Sign In`
 3. Sign into your Azure account
@@ -220,34 +224,275 @@ By default if you commit code to the `CPSECapstone/VS-Frontend` or `CPSECapstone
     - It is suggested if you use the `Sign in with GitHub` options
     - If you decide to use an email \(Microsoft Account\), it is suggested to use the **same** email as your Github for easier computability 
 4. Once on the dashboard, Click `Add New Resource`
-5. Search for `Static Web App`
-6. Click `Create`
-7. Select your Subscription[^3] \(Ex : For us its `Professor K`\)
+5. Search for `Web App`
+6. Select `Web App` and click `Create`
+7. Select your Subscription[^3] \(Ex : For us its `Azure Students`\)
 8. For Resource Group, select `(New) Resource Group`
-9. Give a name for this Static Web App \(Ex : `VetScientia-Frontend`\)
-10. 
+9. Give a name for this Web App \(Ex : `VetScientia-Backend`\)
+10. Keep `Secure unique default hostname` enabled
+11. For the publish options select `Code`
+12. In the Runtime dropdown, Select `Node 20 LTS`
+13. For operating system, stick with the default `Linux`
+14. Chose the region that is closet to the your primary users' location. \(Ex : For us its `West US`\)
+15. Leave the Linux plan to its default and change the pricing plan to `Basic B1 (100 total ACU, 1.75 GB memory, 1 vCPU)`
+16. Leave `Zone Redundancy` off.
+17. Click `Next : Database > `, followed by `Next : Deployment > `
+18. Enable `Continuous deployment`
+19. Ensure the GitHub Account is your GH account
+    - If the account is not your account, Click `Change Account` and login to your GitHub account
+20. Under Organization Select `CPSE Capstone`[^4]
+21. For the repository select `VS-Frontend`
+22. Select `main` for the branch
+23. Leave `Basic authentication` off and click `Review + Create`
+24. Ensure all the settings match the instructions entered above.
+25. Click `Create`
 
-[^3]: Subscription is the billing group that your Azure services will be charged to
-### Deployment of the Backend Using Azure Web App
+#### Updating Workflow File to adopt for the Mono-repo
+
+As our repo contains both frontend and backend code, we need to tell Azure where the backend code is so it can create a VM running only that folder
+
+1. Head to the [repo](https://github.com/CPSECapstone/VS-Frontend) on GitHub
+2. Open the `github`/`workflows` [folder](https://github.com/CPSECapstone/VS-Frontend/tree/main/.github/workflows)
+3. Select the newly created `.yaml` file \(Ex: ours is called `main_vetscientia-backend.yml`\)
+4. Click the pencil icon ![](../assets//pencil.svg){width=20} on the top right hand corner of the page
+5. Scroll down to `- name: npm install, build, and test`
+6. Add `working-directory: backend` below run
+7. Repeat step 6 for `- name: Zip artifact for deployment`
+8. Scroll to `- name: Upload artifact for deployment job`
+9. Add `path: backend/release.zip` under the 
+    - ``` yaml
+    with:
+      name: node-app
+    ```
+
+Your final `main_vetscientia-backend.yml` file should look something like this:
+``` yaml
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy Node.js app to Azure Web App - VetScientia-Backend
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read #This is required for actions/checkout
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+
+      - name: npm install, build, and test
+        run: |
+          npm install
+          npm run build --if-present
+          npm run test --if-present
+        working-directory: backend
+
+      - name: Zip artifact for deployment
+        run: zip release.zip ./* -r
+        working-directory: backend
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v4
+        with:
+          name: node-app
+          path: backend/release.zip
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    permissions:
+      id-token: write #This is required for requesting the JWT
+      contents: read #This is required for actions/checkout
+
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4
+        with:
+          name: node-app
+
+      - name: Unzip artifact for deployment
+        run: unzip release.zip
+      
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B21491D981F04A6989B5A755A42222F4 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5381BC53939B42C0A42162A6DE560E18 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E12FCB495AFF49DB8A492E20435EABEA }}
+
+      - name: 'Deploy to Azure Web App'
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: 'VetScientia-Backend'
+          slot-name: 'Production'
+          package: .
+          
+```
+
+10. Click the green `Commit changes`
+11. Give a short commit message and click `Commit changes`
+
+#### Adding the Environment Variables to Azure Web App
+
+We also need to upload the environment variables our JWT token and database credentials to Azure
+
+1. Return back to the [Azure dashboard](https://portal.azure.com/#home)
+2. Select the web app you have just created \(Ex : `VetScientia-Backend`\)
+3. On the left navigation menu, scroll down and click `Settings` followed by `Environment Variables`
+4. Click `+ Add`
+5. For the name `MONGODB_URI`
+6. Copy and paste the string for `MONGODB_URI` from `./backend/.env` into the value text felid
+7. Click `Apply`
+8. Repeat steps 4-8 for `SECRET_KEY` instead of `MONGODB_URI`
+9. On the left navigation menu, scroll back up and click `Overview`
+10. Click `Restart`
+
+::: {.callout-tip}
+Take note of the domain URL provided Azure web app under `Default domain`.  It should look something like `vetscientia-backend-xxxxxxxxxx.westus-01.azurewebsites.net`, where `xxxxxxxxxxx` are a mixture of alphanumeric characters
+:::
+
+### Deployment of the Frontend Using Azure Static Web App
+
+1. Go to the [Azure dashboard](https://portal.azure.com/#home) and Click `Add New Resource`
+2. Search for `Static Web App`
+3. Click `Create`
+4. Select the same subscription you have selected for the Azure Web App backend \(Ex : For us its `Azure Students`\)
+5. For Resource Group, select `VetScientia` or whatever name you have given the previous resource group you have made for the Azure Web App backend
+6. Give a name for this Static Web App \(Ex : `VetScientia-Frontend`\)
+7. Select  `Global` for regions
+8.Under deployment details Select `GitHub` as the Source and ensure the GitHub Account is your GH account
+    - If the account is not your account, Click `Change Account` and login to your GitHub account
+9. Under Organization Select `CPSE Capstone`[^4]
+10. For the repository select `VS-Frontend`
+11. Select `main` for the branch
+12  Leave all the build presets ass their default, **except** change `Output location` from `build` to `dist`
+13. Click `Review + Create`
+14 Ensure all the settings match the instructions entered above.
+15 Click `Create`
+
+#### Updating the Workflow
+
+To allow Azure static web apps to access our environment variables we are using we first need to update the GitHub action workflow file
+Furthurmore, we need to copy our Azure static web app configuration file so Azure can hand over the routing to react router
+
+1. Head to the [repo](https://github.com/CPSECapstone/VS-Frontend) on GitHub
+2. Open the `github`/`workflows` [folder](https://github.com/CPSECapstone/VS-Frontend/tree/main/.github/workflows)
+3. Select the azure static web app workflow file \(Ex : For us its `azure-static-web-apps-gray-bush-0c1bf981e.yml`\)
+4. Click the pencil icon ![](../assets//pencil.svg){width=20} on the top right hand corner of the page
+5. Scroll to `- name: Install OIDC Client from Core Package`
+6. Just above that insert the following:
+
+    ``` yaml
+        - name: Set environment variables
+        run: echo "VITE_APP_BASE_URL=vetscientia-backend-xxxxxxxxxx.westus-01.azurewebsites.net" >> $GITHUB_ENV
+    ```
+    where `vetscientia-backend-xxxxxxxxxx.westus-01.azurewebsites.net` is the URL copied earlier from the backend 
+
+7. Next scroll to `- name: Build And Deploy`
+8. Above that insert the following
+
+    ```yaml
+      - name: Create dist directory if it doesn't exist
+        run: mkdir -p frontend/dist
+      - name: Copy config file to dist
+        run: cp frontend/staticwebapp.config.json frontend/dist/staticwebapp.config.json
+    ```
+    This creates the `./dist` folder and copies over the Azure configuration settings file
+
+Your final `azure-static-web-apps-gray-bush-0c1bf981e.yml` file should look something like this:
+
+``` yaml
+name: Azure Static Web Apps CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy_job:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    runs-on: ubuntu-latest
+    name: Build and Deploy Job
+    permissions:
+       id-token: write
+       contents: read
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+          lfs: false
+      - name: Set environment variables
+        run: echo VITE_APP_BASE_URL=vetscientia-backend-xxxxxxxxxx.westus-01.azurewebsites.net" >> $GITHUB_ENV
+      - name: Install OIDC Client from Core Package
+        run: npm install @actions/core@1.6.0 @actions/http-client
+      - name: Get Id Token
+        uses: actions/github-script@v6
+        id: idtoken
+        with:
+           script: |
+               const coredemo = require('@actions/core')
+               return await coredemo.getIDToken()
+           result-encoding: string
+      - name: Create dist directory if it doesn't exist
+        run: mkdir -p frontend/dist
+      - name: Copy config file to dist
+        run: cp frontend/staticwebapp.config.json frontend/dist/staticwebapp.config.json
+      - name: Build And Deploy
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GRAY_BUSH_0C1BF981E }}
+          action: "upload"
+          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
+          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
+          app_location: "./frontend" # App source code path
+          api_location: "" # Api source code path - optional
+          output_location: "dist" # Built app content directory - optional
+          github_id_token: ${{ steps.idtoken.outputs.result }}
+          ###### End of Repository/Build Configurations ######
+
+  close_pull_request_job:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    name: Close Pull Request Job
+    steps:
+      - name: Close Pull Request
+        id: closepullrequest
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          action: "close"
+```
+
+9. Click the green `Commit changes`
+10. Give a short commit message and click `Commit changes`
+
+### Visiting the Site
+
+1. Return back to the [Azure dashboard](https://portal.azure.com/#home)
+2. Select the web app you have just created \(Ex : `VetScientia-Frontend`\)
+3. Click the link below the URL
+
+**Congrats** The VetScientia site is fully deployed!
+
+[^3]: Subscription is the billing group that your Azure services will be charged to.  Most likely you wont have access to the student plan therefore will need to use your own budget plan. One should have been created for you by default when your account was first setup. 
+[^4]: For production you will select `VetScientia` organization instead of `CPSE Capstone`.  We are using `CPSE Capstone` because it allows the use of the education plan features.
+
 
 # Simulation
-
-## Using the Simulator
-
-Test out using the simulation with [Vet Scientia Demo](https://vs-capstone.itch.io/vs-demo).
-
-To focus on the animal, click the animal.
-
-To check the animal's vitals, focus on the animal and then hover over the animal. You will see a popup of the vitals like heart rate and respiratory rate.
-
-To exit focus on any object, click the back button located towards the bottom of the screen.
-
-To examine the drugs, click the cabinet on the left.
-
-To look at the name of a drug, hover over the drug.
-
-To equip a drug, click the drug bottle.
-
-To get a short description of the drug, click the thumbnail of the drug.
-
-To apply a drug to the animal, equip the drug, focus on the animal, and then click the animal. The drug thumbnail should disappear.

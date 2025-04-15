@@ -2,6 +2,7 @@ import "./styles.css";
 import createHome from "./home/home.js";
 import createUserGuide from "./user_guide/user_guide.js";
 import createLicensing from "./licensing/licensing.js";
+import createDeployment from "./deployment/deployment.js";
 
 function removeClickedStylingFromTabs() {
   for (const tab of document.querySelectorAll("nav>*")) {
@@ -18,6 +19,17 @@ function clearPageContent() {
   }
 }
 
+function clearDocumentHead(){
+  // Filter for only scripts
+  const scripts = document.head.querySelectorAll("script[data-loaded-by='quarto']")
+  // Remove all scripts from the document head
+  console.log("scripts", scripts)
+  for (const script of scripts) {
+    document.head.removeChild(script);
+  }
+  console.log("UU",document.head.querySelectorAll("script[data-loaded-by='quarto']"))
+}
+
 const homeButton = document.querySelector("#home-tab");
 homeButton.addEventListener("click", () => {
   if (lastTabClicked !== "home") {
@@ -25,6 +37,7 @@ homeButton.addEventListener("click", () => {
     removeClickedStylingFromTabs();
     homeButton.classList.add("last-clicked");
     clearPageContent();
+    clearDocumentHead();
     createHome();
   }
 });
@@ -36,6 +49,7 @@ userGuideButton.addEventListener("click", () => {
     removeClickedStylingFromTabs();
     userGuideButton.classList.add("last-clicked");
     clearPageContent();
+    clearDocumentHead();
     createUserGuide();
   }
 });
@@ -47,9 +61,23 @@ licensingButton.addEventListener("click", () => {
     removeClickedStylingFromTabs();
     licensingButton.classList.add("last-clicked");
     clearPageContent();
+    clearDocumentHead();
     createLicensing();
   }
 });
+
+const deploymentButton = document.querySelector("#deployment-tab");
+deploymentButton.addEventListener("click", () => {
+  if (lastTabClicked !== "deployment") {
+    lastTabClicked = "deployment";
+    removeClickedStylingFromTabs();
+    deploymentButton.classList.add("last-clicked");
+    clearPageContent();
+    clearDocumentHead();
+    createDeployment();
+  }
+});
+
 
 function domReady(cb) {
   if (
