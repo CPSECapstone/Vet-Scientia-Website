@@ -48,7 +48,7 @@ userGuideButton.addEventListener("click", () => {
     userGuideButton.classList.add("last-clicked");
     createDeployment();
     clearPageContent();
-    clearDocumentHead();
+    // clearDocumentHead();
     createUserGuide();
   }
 });

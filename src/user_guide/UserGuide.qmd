@@ -330,6 +330,11 @@ To view a student's report
 2. Scroll to the student you would like to view the report for.
 3. Click the document icon to view the report for that student on this simulation.
 
+The left portion of the report page highlights key parameter 
+
+###### Submitting Written Feedback
+In
+
 ::: {.callout-tip}
 To return back to the assignment's detail page, use the browser's back button.
 :::
