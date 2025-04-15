@@ -8,7 +8,7 @@ export default function createDeployment() {
     document.dispatchEvent(tocEvent);
     window.dispatchEvent(new Event("scroll")); // retrigger scroll tracking
   }, 1000);
-  fetch("deployment.html")
+  fetch("Deployment.html")
     .then((response) => response.text())
     .then((data) => {
       const deployment = document.createElement("div");
