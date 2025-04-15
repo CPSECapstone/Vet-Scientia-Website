@@ -32,10 +32,8 @@ export default function createUserGuide() {
           }
           try{
             // Make sure we don't import re-occurring scripts
-            if (!Array.from(document.scripts).some(existingScript => existingScript.src === script.src || existingScript.textContent === script.textContent)) {
               script.setAttribute("data-loaded-by", "quarto");
               document.head.appendChild(script);
-            }
           } catch (error) {
             console.error("Error executing script:", error);
             userGuide.removeChild(element);
