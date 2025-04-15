@@ -127,6 +127,7 @@ Each entry will display the instructor's name and the number of seats assigned t
 
 1. Click `+ Add Teacher` on the top right-hand corner of the page.
 2. Enter in the following credentials for the instructor:
+
     1. Their first name.
     2. Their last name.
     3. Their email address. [^1]
@@ -209,6 +210,7 @@ Only, the university side of this feature has been implemented.  there is curren
 The question page allows university admins to contact the super admin for any questions or concerns they may have.
 
 To submit a message to a super-admin
+
 1. Type in the message you would like to send to the super-admin.
 2. Select an urgency level to mark the message as:
   - Low
@@ -266,6 +268,7 @@ The assignments page allows an instructor to view and manage all the class assig
 When you visit the [teacher assignment page]() you will be presented to all active or draft assignments for the course.
 
 Each assignment card will have the following information:
+
 - Assignment Name
 : The name of the assignment/simulation \(Ex `Assignment 1.1`\).
 - Assignment Status
@@ -355,11 +358,11 @@ The left portion of the report page highlights key parameters that were assessed
 
 Beside each parameter is a indicator of the performance in that section with three possible colors:
 
-- ![](../assets//performance_status/pass.svg) Green/Excellent
+- ![](../assets//performance_status/pass.svg){width=20} Green/Excellent
 : The student's performance in this category was below the critical threshold of error
-- ![](../assets//performance_status/acceptable.svg)  Amber/Acceptable
+- ![](../assets//performance_status/acceptable.svg){width=20}  Amber/Acceptable
 : The student's performance in this category was at or slightly above the critical threshold of error
-- ![](../assets//performance_status/fail.svg) Red/Failed
+- ![](../assets//performance_status/fail.svg){width=20} Red/Failed
 :  The student's performance in this category was severely above the critical threshold of error
 
 ###### Submitting Written Feedback
