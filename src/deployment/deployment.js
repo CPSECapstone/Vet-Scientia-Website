@@ -39,18 +39,15 @@ export default function createDeployment() {
         }
       }
 
-      console.log("User guide scripts:", deploymentScripts);
       for(const s of deploymentScripts) {
-        // console.log("Deployment script loaded:", s.src || s.textContent);
         document.head.appendChild(s);
       }
 
       setTimeout(() => {
-        console.log("Dispatching scroll event2");
         const tocEvent = new Event("DOMContentLoaded");
         document.dispatchEvent(tocEvent);
         window.dispatchEvent(new Event("scroll")); // retrigger scroll tracking
-      }, 2000);
+      }, 300);
     })
     .catch((error) => {
       console.error("Error deployment guide:", error);

@@ -46,9 +46,7 @@ userGuideButton.addEventListener("click", () => {
     lastTabClicked = "user-guide";
     removeClickedStylingFromTabs();
     userGuideButton.classList.add("last-clicked");
-    createDeployment();
     clearPageContent();
-    // clearDocumentHead();
     createUserGuide();
   }
 });

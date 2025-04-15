@@ -25,11 +25,8 @@ export default function createUserGuide() {
           } else {
             script.textContent = element.textContent;
           }
-            // Make sure we dont import re-occurring scripts
-            if (!Array.from(document.scripts).some(existingScript => existingScript.src === script.src || existingScript.textContent === script.textContent)) {
               script.setAttribute("data-loaded-by", "quarto");
               userGuideScripts.push(script);
-            }
             userGuide.removeChild(element);
         }
         try{
@@ -38,19 +35,15 @@ export default function createUserGuide() {
           userGuide.removeChild(element);
         }
       }
-      console.log("User guide scripts:", userGuideScripts);
       for(const s of userGuideScripts) {
-        // console.log("User guide script loaded:", s);
-        console.log("User guide script loaded:", s);
         document.head.appendChild(s);
       }
 
       setTimeout(() => {
-        console.log("Dispatching scroll event2");
         const tocEvent = new Event("DOMContentLoaded");
         document.dispatchEvent(tocEvent);
         window.dispatchEvent(new Event("scroll")); // retrigger scroll tracking
-      }, 2000);
+      }, 300);
 
     })
     .catch((error) => {
