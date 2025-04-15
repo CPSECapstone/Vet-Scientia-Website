@@ -7,7 +7,7 @@ export default function createUserGuide() {
     const tocEvent = new Event("DOMContentLoaded");
     document.dispatchEvent(tocEvent);
     window.dispatchEvent(new Event("scroll")); // retrigger scroll tracking
-  }, 1000);
+  }, 2000);
   fetch("UserGuide.html")
     .then((response) => response.text())
     .then((data) => {
@@ -31,9 +31,11 @@ export default function createUserGuide() {
             script.textContent = element.textContent;
           }
           try{
-            // Make sure we don't import re-occurring scripts
+            // Make sure we dont import re-occurring scripts
+            if (!Array.from(document.scripts).some(existingScript => existingScript.src === script.src || existingScript.textContent === script.textContent)) {
               script.setAttribute("data-loaded-by", "quarto");
               document.head.appendChild(script);
+            }
           } catch (error) {
             console.error("Error executing script:", error);
             userGuide.removeChild(element);
