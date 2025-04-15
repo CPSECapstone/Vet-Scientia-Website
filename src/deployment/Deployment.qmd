@@ -10,6 +10,7 @@ format:
      toc: true
      toc-depth: 3
      number-sections: true
+     code-copy: false
 editor: source
 execute: 
   error: true
@@ -25,6 +26,130 @@ The following document aimed for system administrators and developers to guide t
 # Web Portal
 
 ## Prerequisites 
+
+Please make sure you have the following the software installed on your machine before starting development and deployment
+
+1. Computer with an account with administrator privileges 
+2. NodeJS and npm
+3. A code editor \(VS Code is recommended\)
+4. Git client with credentials linked to Github
+5. \(Optional but suggested\) Mongo Compass for database management
+
+## Cloning the Project
+
+The following section will guide you through cloning the project from our source control platform, GitHub down to your local machine
+
+::: {.callout-note}
+Before getting started make sure you have access to GitHub repo with read & write access  
+:::
+
+There are three primary ways to clone this project to your local machine:
+
+1. Git CLI
+2. Source Control 
+3. Git GUI tools
+
+### Cloning Trough CLI
+
+To clone the project from the Git CLI:
+
+::: {.callout-tip}
+You might want to make a new folder for this project.  In the terminal you can make a new directory using the `mkdir(1)` command `mkdir <directory name>` 
+:::
+
+1. Open a new terminal window
+2. Change to the directory you would like to clone the project to
+3. Run `git@github.com:CPSECapstone/VS-Frontend.git`
+4. Open that directory `cd VS-Frontend` and run `code` to open the project in VS Code[^1]
+
+[^1]: If you prefer you can continue the following steps in the terminal 
+
+### Cloning Through VSCode
+1. Open VS Code
+2. Select the Source Control ![](../assets//source-control.svg){width=20} tab from the left hand navigation menu 
+3. Click `Clone Repository`
+4. Click `Clone from GitHub`
+    1. If asked if the GitHub extension can access your GitHub account Select `Allow`
+    2. Select your GitHub account[^2]
+    3. Select `CPSECapstone/VS-Frontend`
+5. Pick a destination directory for this repository to be stored locally.
+
+For more reference on using Git through VS Code check out this [guide](https://code.visualstudio.com/docs/sourcecontrol/overview) by the VS Code team.
+
+[^2]: You may need to sign in to Github and grant VS code access to your Github repositories.
+
+### Cloning Through the Github Desktop
+
+1. Open GitHub Desktop
+2. From the top menu, Select `File` > `Clone Repository`
+3. Select the tab `Github.com`
+4. In the search bar type `CPSECapstone/VS-Frontend`
+5. Select the repository from the search results
+6. Choose a directory for the clone project to be stored locally
+7. Click `Clone`
+
+## Getting Dependencies 
+
+As this is a NodeJS web project we will need to install some dependencies both for the front and backend before we can start development and deployment locally
+
+### Frontend
+
+1. Change into the frontend directory of the monorepo `cd ./frontend`
+2. Run `npm install`
+
+### Backend
+
+1. Change into the frontend directory of the monorepo `cd ./frontend`
+2. Run `npm install`
+
+## Environment Variables 
+
+Our project has many secrets such as connections URLs and passwords which are not committed to our version control system for security purposes 
+
+Please obtain these credentials from the super-admins
+Afterwards,
+
+1. Change to the frontend directory `cd ./frontend`
+2. Make a new file and name it `.env`
+3. Paste in the credentials related to `VITE_APP_BASE_URL` in the format `VITE_APP_BASE_URL=<value>` where the `<value>` represents the credentials obtained 
+
+    ``` js
+    VITE_APP_BASE_URL="https://xyz.com:8080/"
+    ```
+
+4. Go to the backend directory `cd ../backend`
+5. Create another file name `.env`
+6. Paste in obtained credentials related to `MONGODB_URI`, `PORT`, and `SECRET_KEY` in the same format `<variable>=<value>`
+
+    ``` js
+    MONGODB_URI=MONGO_DATABASE_URL
+    PORT=PORT_NUMBER_FOR_EXPRESS_SERVER
+    SECRET_KEY=VERY_SECRET_KEY
+    ```
+
+## Formatting Code
+
+This project uses prettier as our default formatter
+To use it in VSCode
+1. Make sure you have the prettier VS Code extension installed
+
+:::{.callout-tip}
+You can use the keyboard shortcut `CTRL`+`,` \(or `CMD`+`,` on a Mac\) to access the settings menu 
+:::
+
+2. Click the Settings icon on the bottom left of VS Code, followed by `Settings`
+3. In the search felid type in type `Formatter`
+4. From the search results select `Text Editor`
+5. Under `Editor Default Formatter` select `Prettier-Code formatter`
+6. Close Settings by clicking the "X" \(dot for the currently selected tab\) next to the settings tab
+
+### \(Alternative\) Installing Prettier Through the CLI
+
+If you prefer to run prettier through the terminal or are not using VS Code
+
+1. Install Prettier `npm install --save-dev --save-exact prettier`
+2. Open the part of the repo you would like to format \(Ex : `frontend` then  `cd ./frontend`\)
+3. Run `prettier --write <path>`  Ex : `prettier --write ./src` to format all the files in the `src` folder
 
 ## Installation Locally
 
