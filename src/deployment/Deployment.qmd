@@ -147,13 +147,88 @@ You can use the keyboard shortcut `CTRL`+`,` \(or `CMD`+`,` on a Mac\) to access
 
 If you prefer to run prettier through the terminal or are not using VS Code
 
+:::{.callout-tip}
+If you are in the frontend directory you can also just run `npm format` to format all files in the frontend folder
+:::
+
 1. Install Prettier `npm install --save-dev --save-exact prettier`
 2. Open the part of the repo you would like to format \(Ex : `frontend` then  `cd ./frontend`\)
 3. Run `prettier --write <path>`  Ex : `prettier --write ./src` to format all the files in the `src` folder
 
+
+## Linting
+
+We use ESLint as our linter for the this project
+
+
+To run linting for the project
+
+1. Change to the frontend directory `cd ./frontend` or backend directory `cd ./backend`
+2. Run `npm lint`
+
+## Testing
+
+:::{.callout-note}
+Testing is currently only setup in the frontend part of the project, we will also work on getting it setup on the backend before release too.
+:::
+
+1. Change to the frontend directory `cd ./frontend`
+2. Run `npm test`
+
 ## Installation Locally
 
+The following steps will show how start our web application from your local machine.
+
+:::{.callout-note}
+Before you start, make sure you have all npm packages installed and your environment files have been created & set.
+:::
+
+### Running the backend
+
+1. Change to the backend folder `cd ./backend`
+2. To run the server in deployment mode run `npm run dev`
+3. To run the server in production mode run `npm run start`
+
+### Running the frontend in development mode
+
+1. Change to the frontend folder `cd ./frontend`
+2. To start the Vite development server run `npm run start`
+
+### Running the frontend in deployment mode
+
+1. Change to the frontend folder `cd ./frontend`
+2. Compile the Vite React app using `npm run build` 
+    - The newly created build will be located in `./dist`
+3. To run deployment build using Vite run `npm run serve`
+
+:::{.callout-tip}
+Alternatively, if you have Python installed you can use its HTTP server. 
+Change to the `./dist` folder. Then, in the terminal run `python3 -m http.server`
+:::
+
 ## Deployment on the Cloud
+
+Our web application will be hosted on a mixture of AWS and Azure infostracuture 
+By default if you commit code to the `CPSECapstone/VS-Frontend` or `CPSECapstone/VS-Frontend` main branch or make a PR to the main branch changes will automatically get deployed to our Azure services
+
+### Deployment of the Frontend Using Azure Static Web App
+
+1. Head to [Azure site](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account/search?ef_id=_k_CjwKCAjw5PK_BhBBEiwAL7GTPYLqxR0heIP7vCOIo1s7IK8PdeRPmQo3IdrYagaZghn1olndJkjdABoCOrcQAvD_BwE_k_&OCID=AIDcmmfq865whp_SEM__k_CjwKCAjw5PK_BhBBEiwAL7GTPYLqxR0heIP7vCOIo1s7IK8PdeRPmQo3IdrYagaZghn1olndJkjdABoCOrcQAvD_BwE_k_&gad_source=1&gbraid=0AAAAADcJh_tgWDQhaNlmVCfX0GJ6Km5si&gclid=CjwKCAjw5PK_BhBBEiwAL7GTPYLqxR0heIP7vCOIo1s7IK8PdeRPmQo3IdrYagaZghn1olndJkjdABoCOrcQAvD_BwE) 
+2. Click `Sign In`
+3. Sign into your Azure account
+  Notes:
+    - It is suggested if you use the `Sign in with GitHub` options
+    - If you decide to use an email \(Microsoft Account\), it is suggested to use the **same** email as your Github for easier computability 
+4. Once on the dashboard, Click `Add New Resource`
+5. Search for `Static Web App`
+6. Click `Create`
+7. Select your Subscription[^3] \(Ex : For us its `Professor K`\)
+8. For Resource Group, select `(New) Resource Group`
+9. Give a name for this Static Web App \(Ex : `VetScientia-Frontend`\)
+10. 
+
+[^3]: Subscription is the billing group that your Azure services will be charged to
+### Deployment of the Backend Using Azure Web App
 
 # Simulation
 
