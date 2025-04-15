@@ -43,6 +43,7 @@ The following document is a guide for students, teachers, and admins alike to gu
     2. Last Name (Must match what you provided with your admin.)
     3. Email (Must use university/clinic email if domain checking is turned on for your organization.)
     4. Password with the following requirements: 
+    <a id="password-requirements"></a>
         1. Must be at minimum 8 characters long.
         2. Must **NOT** include your name.
         3. Must have at least one symbol and numeric character.
@@ -126,6 +127,7 @@ Each entry will display the instructor's name and the number of seats assigned t
 
 1. Click `+ Add Teacher` on the top right-hand corner of the page.
 2. Enter in the following credentials for the instructor:
+
     1. Their first name.
     2. Their last name.
     3. Their email address. [^1]
@@ -202,12 +204,13 @@ The feedback table provides an overview of the latest feedback from students and
 ### Questions
 
 ::: {.callout-note collapse="true"}
-Only, frontend implementation are deployed in this release.  Their is no backend support for submitting questions to the super-admin.
+Only, the university side of this feature has been implemented.  there is currently no way for super-admins to view the questions posted on this page.
 :::
 
 The question page allows university admins to contact the super admin for any questions or concerns they may have.
 
 To submit a message to a super-admin
+
 1. Type in the message you would like to send to the super-admin.
 2. Select an urgency level to mark the message as:
   - Low
@@ -217,6 +220,26 @@ To submit a message to a super-admin
   - High
   : The request has high priory, for bugs or issues effecting major critical systems (ie simulations, assignments, auth) or site -wide outages.
 3. Click `Submit`.
+
+### Managing Your Account
+
+The edit profile page allows an university admin to edit their first and last name and change their password
+
+To access the edit profile page
+
+1. Click the profile icon on the right side of the navbar.
+2. Select `Edit Profile` 
+
+#### Updating Your Name
+1. Select the input felid next to your name \(first/last\)
+2. Enter in your new name
+3. Click `Update`
+
+#### Changing Your Password
+1. Select the input felid next to your password
+2. Enter in your new password
+  - As a reminder please to follow the [password requirements](#password-requirements) when changing your password
+3. Click `Update`
 
 ## Teacher
 
@@ -245,6 +268,7 @@ The assignments page allows an instructor to view and manage all the class assig
 When you visit the [teacher assignment page]() you will be presented to all active or draft assignments for the course.
 
 Each assignment card will have the following information:
+
 - Assignment Name
 : The name of the assignment/simulation \(Ex `Assignment 1.1`\).
 - Assignment Status
@@ -330,11 +354,27 @@ To view a student's report
 2. Scroll to the student you would like to view the report for.
 3. Click the document icon to view the report for that student on this simulation.
 
-The left portion of the report page highlights key parameter 
+The left portion of the report page highlights key parameters that were assessed during the simulation such as `heart rate`, `handling of critical vitals`, etc.
+
+Beside each parameter is a indicator of the performance in that section with three possible colors:
+
+- ![](../assets//performance_status/pass.svg){width=20} Green/Excellent
+: The student's performance in this category was below the critical threshold of error
+- ![](../assets//performance_status/acceptable.svg){width=20}  Amber/Acceptable
+: The student's performance in this category was at or slightly above the critical threshold of error
+- ![](../assets//performance_status/fail.svg){width=20} Red/Failed
+:  The student's performance in this category was severely above the critical threshold of error
 
 ###### Submitting Written Feedback
-In
 
+In addition to viewing detailed statistics collected by the simulation on the student performance, you can also write individual feedback to each student for 
+
+To write feedback
+1. Access the report of the student you would like to write feedback for
+2. Type in the feedback you would like to provide to the student
+3. Any previously written feedback will be inside the text box. To edit existing feedback simply make the changes to the text box
+4. Click `Submit Feedback` to upload and save the feedback for the student to view
+ 
 ::: {.callout-tip}
 To return back to the assignment's detail page, use the browser's back button.
 :::
