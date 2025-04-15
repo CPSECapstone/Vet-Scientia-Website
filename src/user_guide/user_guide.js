@@ -50,7 +50,7 @@ export default function createUserGuide() {
         const tocEvent = new Event("DOMContentLoaded");
         document.dispatchEvent(tocEvent);
         window.dispatchEvent(new Event("scroll")); // retrigger scroll tracking
-      }, 1000);
+      }, 2000);
 
     })
     .catch((error) => {
