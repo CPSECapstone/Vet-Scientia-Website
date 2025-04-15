@@ -18,36 +18,34 @@ export default function createDeployment() {
       header.classList.add("deployment-header");
       pageContent.appendChild(header);
 
-      const scripts = deployment.querySelectorAll('script[type="module"]');
-      scripts.forEach(script => deployment.removeChild(script));
-
       while (deployment.firstChild) {
         const element = deployment.firstChild;
 
-        
         // Re-execute scripts
         if (element.tagName === "SCRIPT") {
+          // Create a new script element
           const script = document.createElement("script");
           if (element.src) {
-            console.log("src", element.src);
             script.src = element.src;
           } else {
-            console.log("textContent", element.textContent);
             script.textContent = element.textContent;
           }
           try{
-            script.setAttribute("data-loaded-by", "quarto");
+            // Check for module level scripts (Only one Quarto imports is  sectionChanged)
+            if (typeof window["sectionChanged"] === "undefined") {
+          script.setAttribute("data-loaded-by", "quarto");
+          script.type = "module";
           document.head.appendChild(script);
+            }
           } catch (error) {
             deployment.removeChild(element);
             continue
           }
         }
         try{
-        pageContent.appendChild(element);
+          pageContent.appendChild(element);
         } catch (error) {
           deployment.removeChild(element);
-
         }
       }
     })

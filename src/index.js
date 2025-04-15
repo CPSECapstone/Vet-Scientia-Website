@@ -23,11 +23,9 @@ function clearDocumentHead(){
   // Filter for only scripts
   const scripts = document.head.querySelectorAll("script[data-loaded-by='quarto']")
   // Remove all scripts from the document head
-  console.log("scripts", scripts)
   for (const script of scripts) {
     document.head.removeChild(script);
   }
-  console.log("UU",document.head.querySelectorAll("script[data-loaded-by='quarto']"))
 }
 
 const homeButton = document.querySelector("#home-tab");
@@ -48,6 +46,7 @@ userGuideButton.addEventListener("click", () => {
     lastTabClicked = "user-guide";
     removeClickedStylingFromTabs();
     userGuideButton.classList.add("last-clicked");
+    createDeployment();
     clearPageContent();
     clearDocumentHead();
     createUserGuide();

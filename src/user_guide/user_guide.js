@@ -18,8 +18,6 @@ export default function createUserGuide() {
       header.classList.add("user-guide-header");
       pageContent.appendChild(header);
 
-      const scripts = userGuide.querySelectorAll('script[type="module"]');
-      scripts.forEach(script => userGuide.removeChild(script));
 
       while (userGuide.firstChild) {
         const element = userGuide.firstChild;
@@ -33,12 +31,12 @@ export default function createUserGuide() {
             script.textContent = element.textContent;
           }
           try{
-            if (typeof window[scriptName] === "undefined") {
-          script.setAttribute("data-loaded-by", "quarto");
-          document.head.appendChild(script);
-          console.log("script added", script);
+            if (!Array.from(document.scripts).some(existingScript => existingScript.src === script.src || existingScript.textContent === script.textContent)) {
+              script.setAttribute("data-loaded-by", "quarto");
+              document.head.appendChild(script);
             }
           } catch (error) {
+            console.error("Error executing script:", error);
             userGuide.removeChild(element);
             continue
           }
