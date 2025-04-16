@@ -63,17 +63,17 @@ licensingButton.addEventListener("click", () => {
   }
 });
 
-const deploymentButton = document.querySelector("#deployment-tab");
-deploymentButton.addEventListener("click", () => {
-  if (lastTabClicked !== "deployment") {
-    lastTabClicked = "deployment";
-    removeClickedStylingFromTabs();
-    deploymentButton.classList.add("last-clicked");
-    clearPageContent();
-    clearDocumentHead();
-    createDeployment();
-  }
-});
+// const deploymentButton = document.querySelector("#deployment-tab");
+// deploymentButton.addEventListener("click", () => {
+//   if (lastTabClicked !== "deployment") {
+//     lastTabClicked = "deployment";
+//     removeClickedStylingFromTabs();
+//     deploymentButton.classList.add("last-clicked");
+//     clearPageContent();
+//     clearDocumentHead();
+//     createDeployment();
+//   }
+// });
 
 
 function domReady(cb) {
