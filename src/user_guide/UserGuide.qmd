@@ -248,18 +248,17 @@ After logging in as a teacher you will be directed to a teacher dashboard where 
 ### Classes
 
 ::: {.callout-note}
-This page is still work in progress and therefore no link has been created to it
+This page is still work in progress and therefore adding classes is not supported 
 :::
 
 The classes page will allows teachers to view, create and manage all their vet simulation courses
 
-#### Generating class codes
+### Navigating the Teacher Dashboard 
 
-::: {.callout-note}
-Only the frontend part of the page is currently operational, Please refer to 
-:::
+Once you have selected a course, you will have a variety of accessible pages which can be navigated between using the left-hand side nav bar.
 
-To generate a course access code 
+You can always return to the courses page by clicking `dashboard`, the red scholar icon, or the [teacher dashboard URL](https://gray-bush-0c1bf981e.6.azurestaticapps.net/eacher-dashboard/add-class).
+
 
 ### Assignments
 
@@ -379,9 +378,10 @@ To write feedback
 To return back to the assignment's detail page, use the browser's back button.
 :::
 
-#### Course Grades 
+### Course Grades
 
-The class grades page gives an overview of the enrolled students performance in the course .
+
+The class grades page gives an overview of the enrolled students performance in the course.
 
 On the top of the page gives a breakdown of the grading scale used in the course.
 Below that contains a table with the each students performance with the following information:
@@ -399,6 +399,23 @@ Below that contains a table with the each students performance with the followin
 : A page outlining each of the students performance in each individual assignment.
 
 [^3]: Refer to the top of the page to translate grade percentages to performance categories
+
+### Course Students Page
+
+The course student pages allows teachers to view all currently enrolled students in the course. Additionally it provides an area for teachers to generate a course code to add new students to the class
+
+#### Generating class codes
+
+::: {.callout-note}
+Only the frontend part of the page is currently operational, Please refer to [adding student course](#adding-a-course) for more information.
+:::
+
+In the scores page you can also generate a course code to allow for new students to join
+To generate 
+
+1. Go to the  Score  page
+2. Click `REGENERATE`
+3. The new course course code will display in the white box above
 
 ## Student
 
