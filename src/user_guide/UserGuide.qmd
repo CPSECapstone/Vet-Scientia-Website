@@ -24,6 +24,8 @@ The following document is a guide for students, teachers, and admins alike to gu
 
 # Web Portal
 
+The VetScientia web dashboard can be accessed using the following [link](https://gray-bush-0c1bf981e.6.azurestaticapps.net) or typing `https://gray-bush-0c1bf981e.6.azurestaticapps.net` into your browser URL
+
 ## Account Management
 
 ### Sign-up
@@ -78,7 +80,8 @@ Each entry will show:
 
 #### Adding New Organizations
 
-To add a create a new organization in the system
+To add a create a new organization in the system:
+
 1. Click `Add Organization` on the top right hand corner of the screen 
 2. Enter in the following information for an organization:
     1. Organization Name
@@ -125,6 +128,12 @@ Each entry will display the instructor's name and the number of seats assigned t
 
 #### Adding to an Instructor 
 
+::: {=html}
+<img src="../assets/gifs/add_new_teacher.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
+
+
 1. Click `+ Add Teacher` on the top right-hand corner of the page.
 2. Enter in the following credentials for the instructor:
 
@@ -138,6 +147,14 @@ Each entry will display the instructor's name and the number of seats assigned t
 [^1]: If domain checking is enabled in this organization, then an email address must match the current organization's domain.  
 Ex: `@calpoly.edu`.
 
+#### Changing the Number of Seats
+
+You can change the number of seats a particular instructor has
+
+1. Scroll to the row with the instructor you would like to remove.
+2. Click the `+` button to add more seats to that instructor.
+2. Click the `-` button to remove seats from that instructor.
+
 #### Removing an Instructor
 
 ::: {.callout-caution}
@@ -146,8 +163,12 @@ Once deleted all information linked with that instructor will removed
 There is **NO** way to revive an deleted instructor
 :::
 
-1. Scroll to the row with the instructor you would like to remove.
+::: {=html}
+<img src="../assets/gifs/remove_teacher.gif" loading="lazy" style="max-width: 100%; height: auto;" />
 
+:::
+
+1. Scroll to the row with the instructor you would like to remove.
 2. Click the trash on the row of the instructor.
  
 ### Billing
@@ -168,13 +189,34 @@ Displays the past payment history for this university, such as previous year sub
 
 ### Domains
 
-::: {.callout-note collapse="true"}
-
+::: {.callout-note}
 While the frontend implementation of this feature has been implemented, the backend part is not. Therefore, this rule is not enforced.
 :::
 
 This page allows the university admins to turn on and off domain checking.  
 Each row will display the domain and whether it's allowed in this organization.
+
+::: {=html}
+<img src="../assets/gifs/turn_on_off_domain.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
+
+#### Adding a domain
+
+::: {.callout-warning}
+There's currently no way to remove a domain once it has been added.  Please currently add with caution.
+:::
+
+::: {=html}
+<img src="../assets/gifs/add_domain.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
+
+To add a domain to the university: 
+
+1. Click `Add Domain`.
+2. Enter in the domain name you would like to add.
+3. Click `Submit`.
 
 ### Seats
 
@@ -209,7 +251,12 @@ Only, the university side of this feature has been implemented.  there is curren
 
 The question page allows university admins to contact the super admin for any questions or concerns they may have.
 
-To submit a message to a super-admin
+::: {=html}
+<img src="../assets/gifs/new_question_uni_admin.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
+
+To submit a message to a super-admin:
 
 1. Type in the message you would like to send to the super-admin.
 2. Select an urgency level to mark the message as:
@@ -272,16 +319,24 @@ Each assignment card will have the following information:
 : The name of the assignment/simulation \(Ex `Assignment 1.1`\).
 - Assignment Status
 : The viewable status of an assignment.
+
     - Draft/Unpublished
     : The assignment has been created can only currently be viewed by you the instructor.
+
     - Published
     : The assignment is created, published and viewable by all students in the class.
+
 - Assignment Due Date
 : The due date of this particular assignment/simulation \(Ex `3/9/25`\).
 - Assignment description
 : A brief summary of what this assignment/simulation will contain such as what animal, its difficulty, and any special conditions being tested for \(Ex `Pug:Hard, fixed etc`\).
 
 #### Creating Assignments
+
+::: {=html}
+<img src="../assets/gifs/create_assignment.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
 
 1. Click the blue `Create Assignment` button on the top center of the page.
 2. Enter the following details of the assignment:
@@ -295,6 +350,12 @@ Each assignment card will have the following information:
 [^2]: All assignments are to set to be due at 23:59:59 of that day.
 
 #### Editing Assignments Details
+
+::: {=html}
+<img src="../assets/gifs/edit_assignment.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
+
 To edit the details of an existing assignment \(published or draft\) such as changing its due date or description: 
 1. Click the blue `Edit` button next to the assignment you wish to edit.
 2. Go to the detail\(s\) you wish to change.
@@ -302,8 +363,14 @@ To edit the details of an existing assignment \(published or draft\) such as cha
 4. Click `Save`.
 
 #### Making am Assignment Published
+
 ::: {.callout-caution}
 You can not change an published assignment back to draft form.  To  unpublish an assignment, you will no to delete the assignment and recreate it in draft form.
+:::
+
+::: {=html}
+<img src="../assets/gifs/publish_assignment.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
 :::
 
 To change the assignment to published state:
@@ -316,6 +383,11 @@ To change the assignment to published state:
 Deleting an assignment is **permanent**. There is no way to recover a assignment once it has been deleted.
 :::
 
+::: {=html}
+<img src="../assets/gifs/delete_assignment.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
+
 1. Click the three dots on the top right of the assignment you wish to delete.
 2. Select `Delete`
 3. If you are sure you want to delete this assignment, click `Delete` once more on the confirmation modal
@@ -323,6 +395,11 @@ Deleting an assignment is **permanent**. There is no way to recover a assignment
 #### Viewing Details 
 
 To view the details of an particular assignment, such as assignment completion or individual student performance, click the `Details` button  on the bottom right of the assignment of interest.
+
+::: {=html}
+<img src="../assets/gifs/details_assignments.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
 
 On the top of the assignment details page will be an visual overview of assignment completion for the class.
 
@@ -344,6 +421,10 @@ Below that is an table outlining each student status and report on the assignmen
 This feature is still work in progress, some reports and/or statistics may not be available.
 :::
 
+::: {=html}
+<img src="../assets/gifs/get_report.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
 
 The reports page allows an instructor to view details statistics of an student's performance over a particular simulation such as their average reaction time or number of mistakes.
 
@@ -368,6 +449,11 @@ Beside each parameter is a indicator of the performance in that section with thr
 
 In addition to viewing detailed statistics collected by the simulation on the student performance, you can also write individual feedback to each student for 
 
+::: {=html}
+<img src="../assets/gifs/edit_feedback.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
+
 To write feedback
 1. Access the report of the student you would like to write feedback for
 2. Type in the feedback you would like to provide to the student
@@ -379,7 +465,6 @@ To return back to the assignment's detail page, use the browser's back button.
 :::
 
 ### Course Grades
-
 
 The class grades page gives an overview of the enrolled students performance in the course.
 
@@ -410,10 +495,15 @@ The course student pages allows teachers to view all currently enrolled students
 Only the frontend part of the page is currently operational, Please refer to [adding student course](#adding-a-course) for more information.
 :::
 
+::: {=html}
+<img src="../assets/gifs/regenerate_class_code.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
+
 In the scores page you can also generate a course code to allow for new students to join
 To generate 
 
-1. Go to the  Score  page
+1. Go to the Score page
 2. Click `REGENERATE`
 3. The new course course code will display in the white box above
 
@@ -460,9 +550,29 @@ The assignment page will be the first page you land on when you select a course.
 
 #### Activating the Simulation Screen
 
+::: {=html}
+<img src="../assets/gifs/visit_sim_via_a1.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
+
 1. Select the button on the assignment with the number of days till due \(Ex: `1 day`\).
 2. Click `Start`.
 3. Wait for the simulation to load, and once loaded, refer to [Simulation](#simulation) for how to interact with the VetSim.
+
+#### Practice Guide
+
+The practice guide provides a basic tutorial on how to use the simulation, the available and equipment and get practice in the simulation environment
+
+::: {=html}
+<img src="../assets/gifs/visit_sim_via_pa.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
+
+To access the practice environment:
+
+1. Click `Practice Guide` on the top right of the page.
+2. Read the provided instructions.
+3. Click `Launch Simulation`
 
 ### Discussion Board
 
@@ -489,6 +599,11 @@ Each post displayed will have the following information:
 
 #### Generating a New Post
 
+::: {=html}
+<img src="../assets/gifs/create_new_discussion_post.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
+
 To create a new post:
 
 1. Click `New Post`.
@@ -507,9 +622,27 @@ To create a new post:
 
 #### Viewing Replies
 
+::: {=html}
+<img src="../assets/gifs/viewRepliesDiscussion.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
 To view a reply to a post, simply click the title of the post you are interested in.
 
+#### Like a Post
+
+::: {=html}
+<img src="../assets/gifs/like_post.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
+
+Click the like button ![](../assets/like_icon.png){width=20} to like a post.  Click the like burton again to remove the like.
+
 #### Creating a Reply
+
+::: {=html}
+<img src="../assets/gifs/replydiscussion.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
 
 There are two ways to reply to a post:
 
@@ -539,20 +672,25 @@ This feature does not save the feedback currently. An error will occur while doi
 
 #### Filtering Feedback Responses
 
+::: {=html}
+<img src="../assets/gifs/filterFeedbackStudent.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+
+:::
+
 Use the two drop-down menus on the top-left of the feedback page to filter out only relevant tickets.
 
-- Status:
-  Filters feedback tickets by their last known status.
+- Status
+  : Filters feedback tickets by their last known status.
 
-        - Waiting for Response:
-          The ticket has been submitted and is in a queue waiting to be processed by a university, organizational, or super admin.
-        - In Progress:
-          The ticket has been seen, and a fix is actively being worked on.
+        - Waiting for Response
+          : The ticket has been submitted and is in a queue waiting to be processed by a university, organizational, or super admin.
+        - In Progress
+          : The ticket has been seen, and a fix is actively being worked on.
         - Resolved:
-          The requested issue has been resolved.
+          : The requested issue has been resolved.
 
-- Topic:
-  The topic this feedback ticket is related to \(Ex: `Simulations`\).
+- Topic
+  : The topic this feedback ticket is related to \(Ex: `Simulations`\).
 
 Once the wanted filters have been selected, click `Search` to apply the filters.
 
