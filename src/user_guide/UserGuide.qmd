@@ -316,14 +316,14 @@ The classes page will allows teachers to view, create and manage all their vet s
 
 Once you have selected a course, you will have a variety of accessible pages which can be navigated between using the left-hand side nav bar.
 
-You can always return to the courses page by clicking `dashboard`, the red scholar icon, or the [teacher dashboard URL](https://gray-bush-0c1bf981e.6.azurestaticapps.net/eacher-dashboard/add-class).
+You can always return to the courses page by clicking `dashboard`, the red scholar icon, or the [teacher dashboard URL](https://gray-bush-0c1bf981e.6.azurestaticapps.net/teacher-dashboard/add-class).
 
 
 ### Assignments
 
 The assignments page allows an instructor to view and manage all the class assignments/simulations for that course.
 
-When you visit the [teacher assignment page]() you will be presented to all active or draft assignments for the course.
+When you visit the [teacher assignment page](https://gray-bush-0c1bf981e.6.azurestaticapps.net/teacher-dashboard/teacherAssignments) you will be presented to all active or draft assignments for the course.
 
 Each assignment card will have the following information:
 
