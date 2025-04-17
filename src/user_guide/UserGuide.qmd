@@ -91,6 +91,7 @@ To add a create a new organization in the system:
 
 1. Click `Add Organization` on the top right hand corner of the screen.
 2. Enter in the following information for an organization:
+
     1. Organization Name.
     2. The Organization Type.
       - University.
@@ -99,6 +100,7 @@ To add a create a new organization in the system:
     4. The subscription contract for that client.
     5. The organizations logo.
     6. The default primary and secondary colors for that organization.
+    
 3. Click `ADD`.
 
 #### Editing an Organizations
