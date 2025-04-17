@@ -482,6 +482,7 @@ In addition to viewing detailed statistics collected by the simulation on the st
 :::
 
 To write feedback
+
 1. Access the report of the student you would like to write feedback for
 2. Type in the feedback you would like to provide to the student
 3. Any previously written feedback will be inside the text box. To edit existing feedback simply make the changes to the text box
