@@ -128,3 +128,4 @@ out
 .yarn/install-state.gz
 .pnp.*
 ./DS_Store
+src/user_guide/UserGuide.html
