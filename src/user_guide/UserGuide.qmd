@@ -24,7 +24,7 @@ The following document is a guide for students, teachers, and admins alike to gu
 
 # Web Portal
 
-The VetScientia web dashboard can be accessed using the following [link](https://gray-bush-0c1bf981e.6.azurestaticapps.net) or typing `https://gray-bush-0c1bf981e.6.azurestaticapps.net` into your browser URL
+The VetScientia web dashboard can be accessed using the following [link](https://gray-bush-0c1bf981e.6.azurestaticapps.net) or typing `https://gray-bush-0c1bf981e.6.azurestaticapps.net` into your browser URL.
 
 ## Account Management
 
@@ -64,57 +64,57 @@ The VetScientia web dashboard can be accessed using the following [link](https:/
 
 ## Super Admin
 
-The super-admin dashboard gives super admins the ability to create organizations and manage existing universities/clinics.  They can also manage the global billing infostracuture for each of their clients and message them through the feedback system.
+The super-admin dashboard gives super admins the ability to create organizations and manage existing universities/clinics. They can also manage the global billing infrastructure for each of their clients and message them through the feedback system.
 
 ### Dashboard
 
-The super-admin dashboard page shows all currently enrolled existing organizations
+The super-admin dashboard page shows all currently enrolled existing organizations.
 Each entry will show:
 
 - Name
-: The name of the organization
+: The name of the organization.
 - Organization Type
-: The type of the organization \(`University` | `Clinic`\)
+: The type of the organization \(`University` | `Clinic`\).
 - Number of Seats
-: The number of seats purchased by the organization 
+: The number of seats purchased by the organization.
 
 #### Adding New Organizations
 
 To add a create a new organization in the system:
 
-1. Click `Add Organization` on the top right hand corner of the screen 
+1. Click `Add Organization` on the top right hand corner of the screen.
 2. Enter in the following information for an organization:
-    1. Organization Name
-    2. The Organization Type
-      - University
-      - Clinic 
-    3. The number of seats for that client
-    4. The subscription contract for that client
-    5. The organizations logo 
-    6. The default primary and secondary colors for that organization
-3. Click `ADD`
+    1. Organization Name.
+    2. The Organization Type.
+      - University.
+      - Clinic.
+    3. The number of seats for that client.
+    4. The subscription contract for that client.
+    5. The organizations logo.
+    6. The default primary and secondary colors for that organization.
+3. Click `ADD`.
 
 #### Editing an Organizations
 
-To edit details of an existing organization such as the number of seats or contract
-1. Click `Details` on the organization you would like to edit
-2. Click `Edit`
-3. Select the text of the detail you would like to edit
-4. Enter the new value
-5. Click `Save`
-6. Dismiss the modal by clicking anywhere outside it
+To edit details of an existing organization such as the number of seats or contract:
+1. Click `Details` on the organization you would like to edit.
+2. Click `Edit`.
+3. Select the text of the detail you would like to edit.
+4. Enter the new value.
+5. Click `Save`.
+6. Dismiss the modal by clicking anywhere outside it.
 
 #### Deleting an Organization
 
 ::: {.callout-caution}
 There is currently **NO** confirmation for deletion of a organization. Please delete with caution.
-Once deleted all information linked with that organization will removed
-There is **NO** way to revive an deleted organization
+Once deleted all information linked with that organization will removed.
+There is **NO** way to revive an deleted organization.
 :::
 
-To remove an organization from the system
-1. Click `Details` on the organization you would like to remove
-2. Click `Delete Organization`
+To remove an organization from the system:
+1. Click `Details` on the organization you would like to remove.
+2. Click `Delete Organization`.
 
 ## University Admin
 
@@ -151,7 +151,7 @@ Ex: `@calpoly.edu`.
 
 #### Changing the Number of Seats
 
-You can change the number of seats a particular instructor has
+You can change the number of seats a particular instructor has.
 
 1. Scroll to the row with the instructor you would like to remove.
 2. Click the `+` button to add more seats to that instructor.
@@ -162,8 +162,8 @@ You can change the number of seats a particular instructor has
 
 ::: {.callout-caution}
 There is currently **NO** confirmation for deletion of a teacher. Please delete with caution.
-Once deleted all information linked with that instructor will removed
-There is **NO** way to revive an deleted instructor
+Once deleted all information linked with that instructor will removed.
+There is **NO** way to revive an deleted instructor.
 :::
 
 
@@ -212,7 +212,7 @@ Each row will display the domain and whether it's allowed in this organization.
 #### Adding a domain
 
 ::: {.callout-warning}
-There's currently no way to remove a domain once it has been added.  Please currently add with caution.
+There's currently no way to remove a domain once it has been added. Please currently add with caution.
 :::
 
 ::: {=html}
@@ -235,7 +235,7 @@ This page will show the total number of seats purchased by the organization and 
 ### Feedback
 
 ::: {.callout-note}
-Please refer to [student-feedback](#dashboard-feedback) for backend status of this feature
+Please refer to [student-feedback](#dashboard-feedback) for backend status of this feature.
 :::
 
 
@@ -256,7 +256,7 @@ The feedback table provides an overview of the latest feedback from students and
 ### Questions
 
 ::: {.callout-note collapse="true"}
-Only, the university side of this feature has been implemented.  there is currently no way for super-admins to view the questions posted on this page.
+Only, the university side of this feature has been implemented. There is currently no way for super-admins to view the questions posted on this page.
 :::
 
 The question page allows university admins to contact the super admin for any questions or concerns they may have.
@@ -273,32 +273,32 @@ To submit a message to a super-admin:
 1. Type in the message you would like to send to the super-admin.
 2. Select an urgency level to mark the message as:
   - Low
-  : The request is of low priory such as a feature request or minor typo in the one of the pages.
+  : The request is of low priority such as a feature request or minor typo in one of the pages.
   - Medium
-  : The request has moderate priory such as a typo affecting a feature or bug in a non-critical system.
+  : The request has moderate priority such as a typo affecting a feature or bug in a non-critical system.
   - High
-  : The request has high priory, for bugs or issues effecting major critical systems (ie simulations, assignments, auth) or site -wide outages.
+  : The request has high priority, for bugs or issues affecting major critical systems (i.e. simulations, assignments, auth) or site-wide outages.
 3. Click `Submit`.
 
 ### Managing Your Account
 
-The edit profile page allows an university admin to edit their first and last name and change their password
+The edit profile page allows a university admin to edit their first and last name and change their password.
 
-To access the edit profile page
+To access the edit profile page:
 
 1. Click the profile icon on the right side of the navbar.
-2. Select `Edit Profile` 
+2. Select `Edit Profile`.
 
 #### Updating Your Name
-1. Select the input felid next to your name \(first/last\)
-2. Enter in your new name
-3. Click `Update`
+1. Select the input field next to your name \(first/last\).
+2. Enter in your new name.
+3. Click `Update`.
 
 #### Changing Your Password
-1. Select the input felid next to your password
-2. Enter in your new password
-  - As a reminder please to follow the [password requirements](#password-requirements) when changing your password
-3. Click `Update`
+1. Select the input field next to your password.
+2. Enter in your new password.
+  - As a reminder please follow the [password requirements](#password-requirements) when changing your password.
+3. Click `Update`.
 
 ## Teacher
 
@@ -307,10 +307,10 @@ After logging in as a teacher you will be directed to a teacher dashboard where 
 ### Classes
 
 ::: {.callout-note}
-This page is still work in progress and therefore adding classes is not supported 
+This page is still work in progress and therefore adding classes is not supported.
 :::
 
-The classes page will allows teachers to view, create and manage all their vet simulation courses
+The classes page will allows teachers to view, create and manage all their vet simulation courses.
 
 ### Navigating the Teacher Dashboard 
 
@@ -358,7 +358,7 @@ Each assignment card will have the following information:
     2. Due Date[^2] for the assignment.
     3. A brief description of the assignment.
     4. The simulation this assignment is linked to.
-3. To save this assignment as a draft \(unpublished \) Click `Save`.
+3. To save this assignment as a draft \(unpublished\) Click `Save`.
 4. To save and publish this assignment, Click `Publish`.
 
 [^2]: All assignments are to set to be due at 23:59:59 of that day.
@@ -375,13 +375,13 @@ Each assignment card will have the following information:
 To edit the details of an existing assignment \(published or draft\) such as changing its due date or description: 
 1. Click the blue `Edit` button next to the assignment you wish to edit.
 2. Go to the detail\(s\) you wish to change.
-3. Click and update the input felid\(s\) with the desired change\(s\).
+3. Click and update the input field\(s\) with the desired change\(s\).
 4. Click `Save`.
 
-#### Making am Assignment Published
+#### Making an Assignment Published
 
 ::: {.callout-caution}
-You can not change an published assignment back to draft form.  To  unpublish an assignment, you will no to delete the assignment and recreate it in draft form.
+You can not change a published assignment back to draft form. To unpublish an assignment, you will need to delete the assignment and recreate it in draft form.
 :::
 
 ::: {=html}
@@ -393,12 +393,12 @@ You can not change an published assignment back to draft form.  To  unpublish an
 
 To change the assignment to published state:
 1. Click the blue `Edit` button next to the assignment you wish to get published.
-2. Click `Publish`
+2. Click `Publish`.
 
 #### Deleting Assignments
 
 ::: {.callout-caution}
-Deleting an assignment is **permanent**. There is no way to recover a assignment once it has been deleted.
+Deleting an assignment is **permanent**. There is no way to recover an assignment once it has been deleted.
 :::
 
 ::: {=html}
@@ -409,12 +409,12 @@ Deleting an assignment is **permanent**. There is no way to recover a assignment
 :::
 
 1. Click the three dots on the top right of the assignment you wish to delete.
-2. Select `Delete`
-3. If you are sure you want to delete this assignment, click `Delete` once more on the confirmation modal
+2. Select `Delete`.
+3. If you are sure you want to delete this assignment, click `Delete` once more on the confirmation modal.
 
 #### Viewing Details 
 
-To view the details of an particular assignment, such as assignment completion or individual student performance, click the `Details` button  on the bottom right of the assignment of interest.
+To view the details of a particular assignment, such as assignment completion or individual student performance, click the `Details` button on the bottom right of the assignment of interest.
 
 ::: {=html}
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
@@ -423,18 +423,18 @@ To view the details of an particular assignment, such as assignment completion o
 
 :::
 
-On the top of the assignment details page will be an visual overview of assignment completion for the class.
+On the top of the assignment details page will be a visual overview of assignment completion for the class.
 
-Below that is an table outlining each student status and report on the assignment. Each row of the table contains:
+Below that is a table outlining each student status and report on the assignment. Each row of the table contains:
 
 - Name
-: Name of the student for this row entry
+: Name of the student for this row entry.
 - Completion Status
-: Indication of whether is a student has completed this assignment.  A green check, signals completion while a dash means unfinished.
+: Indication of whether a student has completed this assignment. A green check signals completion while a dash means unfinished.
 - Graded Status
 : Indication if this student's assignment has been graded. A green check indicates the assignment has been graded, while a dash means it is ungraded.
 - Student Reports
-: A link to view a individual students performance report on this simulations such as avg heart rate or response time. `N/A` means no report for that student is available.
+: A link to view an individual student's performance report on this simulation such as avg heart rate or response time. `N/A` means no report for that student is available.
 
 ##### Student Performance Reports 
 
@@ -451,9 +451,9 @@ This feature is still work in progress, some reports and/or statistics may not b
 
 :::
 
-The reports page allows an instructor to view details statistics of an student's performance over a particular simulation such as their average reaction time or number of mistakes.
+The reports page allows an instructor to view detailed statistics of a student's performance over a particular simulation such as their average reaction time or number of mistakes.
 
-To view a student's report
+To view a student's report:
 
 1. Go to the [view details page](#viewing-details) of a particular assignment.
 2. Scroll to the student you would like to view the report for.
@@ -461,18 +461,18 @@ To view a student's report
 
 The left portion of the report page highlights key parameters that were assessed during the simulation such as `heart rate`, `handling of critical vitals`, etc.
 
-Beside each parameter is a indicator of the performance in that section with three possible colors:
+Beside each parameter is an indicator of the performance in that section with three possible colors:
 
 - ![](../assets//performance_status/pass.svg){width=20} Green/Excellent
-: The student's performance in this category was below the critical threshold of error
+: The student's performance in this category was below the critical threshold of error.
 - ![](../assets//performance_status/acceptable.svg){width=20}  Amber/Acceptable
-: The student's performance in this category was at or slightly above the critical threshold of error
+: The student's performance in this category was at or slightly above the critical threshold of error.
 - ![](../assets//performance_status/fail.svg){width=20} Red/Failed
-:  The student's performance in this category was severely above the critical threshold of error
+: The student's performance in this category was severely above the critical threshold of error.
 
 ###### Submitting Written Feedback
 
-In addition to viewing detailed statistics collected by the simulation on the student performance, you can also write individual feedback to each student for 
+In addition to viewing detailed statistics collected by the simulation on the student performance, you can also write individual feedback to each student.
 
 ::: {=html}
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
@@ -481,12 +481,12 @@ In addition to viewing detailed statistics collected by the simulation on the st
 
 :::
 
-To write feedback
+To write feedback:
 
-1. Access the report of the student you would like to write feedback for
-2. Type in the feedback you would like to provide to the student
-3. Any previously written feedback will be inside the text box. To edit existing feedback simply make the changes to the text box
-4. Click `Submit Feedback` to upload and save the feedback for the student to view
+1. Access the report of the student you would like to write feedback for.
+2. Type in the feedback you would like to provide to the student.
+3. Any previously written feedback will be inside the text box. To edit existing feedback simply make the changes to the text box.
+4. Click `Submit Feedback` to upload and save the feedback for the student to view.
  
 ::: {.callout-tip}
 To return back to the assignment's detail page, use the browser's back button.
@@ -497,30 +497,30 @@ To return back to the assignment's detail page, use the browser's back button.
 The class grades page gives an overview of the enrolled students performance in the course.
 
 On the top of the page gives a breakdown of the grading scale used in the course.
-Below that contains a table with the each students performance with the following information:
+Below that contains a table with each student's performance with the following information:
 
 - Name
 : First and last name of the student.
 - Grade
-: The performance category of the student currently in based on their completed assignments/simulations.  The available performance categories[^3] are:
+: The performance category of the student currently in based on their completed assignments/simulations. The available performance categories[^3] are:
   - Excellent
   - Proficient
   - Average
   - Below Average
   - Needs Improvement
 - Details
-: A page outlining each of the students performance in each individual assignment.
+: A page outlining each of the student's performance in each individual assignment.
 
-[^3]: Refer to the top of the page to translate grade percentages to performance categories
+[^3]: Refer to the top of the page to translate grade percentages to performance categories.
 
 ### Course Students Page
 
-The course student pages allows teachers to view all currently enrolled students in the course. Additionally it provides an area for teachers to generate a course code to add new students to the class
+The course student pages allows teachers to view all currently enrolled students in the course. Additionally it provides an area for teachers to generate a course code to add new students to the class.
 
 #### Generating class codes
 
 ::: {.callout-note}
-Only the frontend part of the page is currently operational, Please refer to [adding student course](#adding-a-course) for more information.
+Only the frontend part of the page is currently operational. Please refer to [adding student course](#adding-a-course) for more information.
 :::
 
 ::: {=html}
@@ -529,12 +529,12 @@ Only the frontend part of the page is currently operational, Please refer to [ad
 </video>
 :::
 
-In the scores page you can also generate a course code to allow for new students to join
-To generate 
+In the scores page you can also generate a course code to allow for new students to join.
+To generate:
 
-1. Go to the Score page
-2. Click `REGENERATE`
-3. The new course course code will display in the white box above
+1. Go to the Score page.
+2. Click `REGENERATE`.
+3. The new course code will display in the white box above.
 
 ## Student
 
@@ -592,7 +592,7 @@ The assignment page will be the first page you land on when you select a course.
 
 #### Practice Guide
 
-The practice guide provides a basic tutorial on how to use the simulation, the available and equipment and get practice in the simulation environment
+The practice guide provides a basic tutorial on how to use the simulation, the available equipment and get practice in the simulation environment.
 
 ::: {=html}
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
@@ -605,7 +605,7 @@ To access the practice environment:
 
 1. Click `Practice Guide` on the top right of the page.
 2. Read the provided instructions.
-3. Click `Launch Simulation`
+3. Click `Launch Simulation`.
 
 ### Discussion Board
 
@@ -675,7 +675,7 @@ To view a reply to a post, simply click the title of the post you are interested
 
 :::
 
-Click the like button ![](../assets/like_icon.png){width=20} to like a post.  Click the like burton again to remove the like.
+Click the like button ![](../assets/like_icon.png){width=20} to like a post. Click the like button again to remove the like.
 
 #### Creating a Reply
 
