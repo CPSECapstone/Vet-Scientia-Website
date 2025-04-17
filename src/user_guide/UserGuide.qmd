@@ -129,7 +129,9 @@ Each entry will display the instructor's name and the number of seats assigned t
 #### Adding to an Instructor 
 
 ::: {=html}
-<img src="../assets/gifs/add_new_teacher.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/add_new_teacher.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -155,6 +157,7 @@ You can change the number of seats a particular instructor has
 2. Click the `+` button to add more seats to that instructor.
 2. Click the `-` button to remove seats from that instructor.
 
+
 #### Removing an Instructor
 
 ::: {.callout-caution}
@@ -163,8 +166,11 @@ Once deleted all information linked with that instructor will removed
 There is **NO** way to revive an deleted instructor
 :::
 
+
 ::: {=html}
-<img src="../assets/gifs/remove_teacher.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/remove_teacher.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -197,7 +203,9 @@ This page allows the university admins to turn on and off domain checking.
 Each row will display the domain and whether it's allowed in this organization.
 
 ::: {=html}
-<img src="../assets/gifs/turn_on_off_domain.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/turn_on_off_domain.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -208,7 +216,9 @@ There's currently no way to remove a domain once it has been added.  Please curr
 :::
 
 ::: {=html}
-<img src="../assets/gifs/add_domain.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/add_domain.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -252,7 +262,9 @@ Only, the university side of this feature has been implemented.  there is curren
 The question page allows university admins to contact the super admin for any questions or concerns they may have.
 
 ::: {=html}
-<img src="../assets/gifs/new_question_uni_admin.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/new_question_uni_admin.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -334,7 +346,9 @@ Each assignment card will have the following information:
 #### Creating Assignments
 
 ::: {=html}
-<img src="../assets/gifs/create_assignment.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/create_assignment.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -352,7 +366,9 @@ Each assignment card will have the following information:
 #### Editing Assignments Details
 
 ::: {=html}
-<img src="../assets/gifs/edit_assignment.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/edit_assignment.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -369,7 +385,9 @@ You can not change an published assignment back to draft form.  To  unpublish an
 :::
 
 ::: {=html}
-<img src="../assets/gifs/publish_assignment.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/publish_assignment.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -384,7 +402,9 @@ Deleting an assignment is **permanent**. There is no way to recover a assignment
 :::
 
 ::: {=html}
-<img src="../assets/gifs/delete_assignment.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/delete_assignment.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -397,7 +417,9 @@ Deleting an assignment is **permanent**. There is no way to recover a assignment
 To view the details of an particular assignment, such as assignment completion or individual student performance, click the `Details` button  on the bottom right of the assignment of interest.
 
 ::: {=html}
-<img src="../assets/gifs/details_assignments.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/details_assignments.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -419,10 +441,13 @@ Below that is an table outlining each student status and report on the assignmen
 ::: {.callout-note}
 
 This feature is still work in progress, some reports and/or statistics may not be available.
+
 :::
 
 ::: {=html}
-<img src="../assets/gifs/get_report.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/get_report.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -450,7 +475,9 @@ Beside each parameter is a indicator of the performance in that section with thr
 In addition to viewing detailed statistics collected by the simulation on the student performance, you can also write individual feedback to each student for 
 
 ::: {=html}
-<img src="../assets/gifs/edit_feedback.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/edit_feedback.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -496,8 +523,9 @@ Only the frontend part of the page is currently operational, Please refer to [ad
 :::
 
 ::: {=html}
-<img src="../assets/gifs/regenerate_class_code.gif" loading="lazy" style="max-width: 100%; height: auto;" />
-
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/regenerate_class_code.mp4" type="video/mp4"/>
+</video>
 :::
 
 In the scores page you can also generate a course code to allow for new students to join
@@ -551,7 +579,9 @@ The assignment page will be the first page you land on when you select a course.
 #### Activating the Simulation Screen
 
 ::: {=html}
-<img src="../assets/gifs/visit_sim_via_a1.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/visit_sim_via_a1.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -564,7 +594,9 @@ The assignment page will be the first page you land on when you select a course.
 The practice guide provides a basic tutorial on how to use the simulation, the available and equipment and get practice in the simulation environment
 
 ::: {=html}
-<img src="../assets/gifs/visit_sim_via_pa.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/visit_sim_via_pa.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -600,7 +632,9 @@ Each post displayed will have the following information:
 #### Generating a New Post
 
 ::: {=html}
-<img src="../assets/gifs/create_new_discussion_post.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/create_new_discussion_post.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -623,15 +657,20 @@ To create a new post:
 #### Viewing Replies
 
 ::: {=html}
-<img src="../assets/gifs/viewRepliesDiscussion.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/viewRepliesDiscussion.mp4" type="video/mp4"/>
+</video>
 
 :::
+
 To view a reply to a post, simply click the title of the post you are interested in.
 
 #### Like a Post
 
 ::: {=html}
-<img src="../assets/gifs/like_post.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/like_post.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -640,7 +679,9 @@ Click the like button ![](../assets/like_icon.png){width=20} to like a post.  Cl
 #### Creating a Reply
 
 ::: {=html}
-<img src="../assets/gifs/replydiscussion.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/replydiscussion.mp4" type="video/mp4"/>
+</video>
 
 :::
 
@@ -673,7 +714,9 @@ This feature does not save the feedback currently. An error will occur while doi
 #### Filtering Feedback Responses
 
 ::: {=html}
-<img src="../assets/gifs/filterFeedbackStudent.gif" loading="lazy" style="max-width: 100%; height: auto;" />
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/filterFeedbackStudent.mp4" type="video/mp4"/>
+</video>
 
 :::
 
