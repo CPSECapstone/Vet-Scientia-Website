@@ -80,6 +80,13 @@ Each entry will show:
 
 #### Adding New Organizations
 
+::: {=html}
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/create_org.mp4" type="video/mp4"/>
+</video>
+
+:::
+
 To add a create a new organization in the system:
 
 1. Click `Add Organization` on the top right hand corner of the screen.
@@ -96,6 +103,13 @@ To add a create a new organization in the system:
 
 #### Editing an Organizations
 
+::: {=html}
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/edit_org.mp4" type="video/mp4"/>
+</video>
+
+:::
+
 To edit details of an existing organization such as the number of seats or contract:
 1. Click `Details` on the organization you would like to edit.
 2. Click `Edit`.
@@ -110,6 +124,13 @@ To edit details of an existing organization such as the number of seats or contr
 There is currently **NO** confirmation for deletion of a organization. Please delete with caution.
 Once deleted all information linked with that organization will removed.
 There is **NO** way to revive an deleted organization.
+:::
+
+::: {=html}
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/delete_org.mp4" type="video/mp4"/>
+</video>
+
 :::
 
 To remove an organization from the system:
@@ -152,6 +173,14 @@ Ex: `@calpoly.edu`.
 #### Changing the Number of Seats
 
 You can change the number of seats a particular instructor has.
+
+::: {=html}
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/change_seats.mp4" type="video/mp4"/>
+</video>
+
+:::
+
 
 1. Scroll to the row with the instructor you would like to remove.
 2. Click the `+` button to add more seats to that instructor.
@@ -290,11 +319,28 @@ To access the edit profile page:
 2. Select `Edit Profile`.
 
 #### Updating Your Name
+
+::: {=html}
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/change_name.mp4" type="video/mp4"/>
+</video>
+
+:::
+
+
 1. Select the input field next to your name \(first/last\).
 2. Enter in your new name.
 3. Click `Update`.
 
 #### Changing Your Password
+
+::: {=html}
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/change_pwd.mp4" type="video/mp4"/>
+</video>
+
+:::
+
 1. Select the input field next to your password.
 2. Enter in your new password.
   - As a reminder please follow the [password requirements](#password-requirements) when changing your password.
