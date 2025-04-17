@@ -809,3 +809,48 @@ To equip a drug, click the drug bottle.
 To get a short description of the drug, click the thumbnail of the drug.
 
 To apply a drug to the animal, equip the drug, focus on the animal, and then click the animal. The drug thumbnail should disappear.
+
+## Running the Guided Demo
+
+Each prompt will guide you to:
+
+- Interact with the anesthesia machine controls  
+- Read real‑time values on the monitors  
+- Examine the dog model and view its vitals  
+- Pick up and instantly equip drugs from the cabinet  
+- Navigate the room using point‑and‑click  
+
+---
+
+## Basic Controls
+
+- **Look around:** Click and drag with the mouse  
+- **Interact:** Left‑click on objects (cabinet doors, knobs, dog, monitors)  
+- **Cancel / Back:** Press the **Back** button (or Esc)  
+- **UI tooltips:** Hover over buttons and icons for explanatory text  
+
+---
+
+## Tutorial Flow
+
+1. **Start:** The narrator introduces the simulation goals.  
+2. **Machine:** Learn to toggle knobs and switches on the anesthesia machine.  
+3. **Monitor:** Observe how vitals update in real time.  
+4. **Dog:** Click the dog to bring up its current vital statistics.  
+5. **Drugs:** Click a drug icon in the cabinet to equip it; notice the Equipped Drug slot updates.  
+6. **Administration:** Click the dog again to apply the drug and watch vital changes on the monitor.  
+7. **Navigation:** Practice pointing and clicking to move between stations in the room.  
+
+---
+
+## Testing Checklist
+
+- [ ] Project opens without Console errors  
+- [ ] UserTest scene loads and begins narration  
+- [ ] You can operate the anesthesia machine controls  
+- [ ] Monitor displays changing vitals correctly  
+- [ ] Dog vitals panel appears when you click the dog  
+- [ ] Equipped Drug slot updates when you pick up a drug  
+- [ ] Administering the drug alters the dog’s vitals on the monitor  
+- [ ] Point‑and‑click navigation works smoothly  
+
