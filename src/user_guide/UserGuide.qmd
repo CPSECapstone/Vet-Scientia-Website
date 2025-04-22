@@ -600,13 +600,42 @@ The details pane of the course is not implemented. Clicking it will link to the 
 
 #### Adding a Course
 
-::: {.callout-note }
-
-Currently, adding courses is only implemented in the frontend. No backend services are deployed to support adding courses to the database.
-:::
-
 1. Click `Join Class`.
 2. Enter in the access code provided to you by your instructor.
+3. Click `Join`.
+
+#### Viewing CLass Details
+
+To view the details of a course
+
+1. Select `Details` on the course card of the course you are interested in.
+
+A modal will popup displaying with the following relevant course information:
+
+- Description
+: A description of the course such as what is being taught and important learning objectives of teh course .
+- Instructor
+: The instructor that is teaching the course.
+- Access Code
+: The access code used to join the current course.
+- Course Start Date
+: The date when the course begins.
+- Course End Date
+: The date when the course ends.
+- Number of the Students
+: The number of the students currently enrolled in the course.
+
+#### Unenrolled from a Course
+
+::: {.callout-caution}
+Unenrolling from a course is permanent.  You may loose all your progress in a course if you un-enroll from a course.
+:::
+
+To unroll from a course
+
+1. Click `Details`.
+2. Click `Unenroll` on the top right hand corner .
+3. Confirm you want to unenroll from a course by clicking `Unenroll`.
 
 ### Navigating the Student Dashboard 
 
