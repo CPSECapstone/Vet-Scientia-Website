@@ -30,6 +30,10 @@ The VetScientia web dashboard can be accessed using the following [link](https:/
 
 ### Sign-up
 
+::: {.callout-tip}
+Currently only the sign-up for teacher works independently.  Create a teacher from the university admin dashboard then signup here.
+:::
+
 1. Ask your administrator to register you into the system and provide them with your `full name` and `email address`.
     - For university admins, please contact the super admin.
     - For teachers, please contact your university admin.
@@ -57,6 +61,27 @@ The VetScientia web dashboard can be accessed using the following [link](https:/
 4. Click `Sign-up`.
 
 ### Login
+
+:::{.callout-tip}
+
+For testing purposes please use the following accounts:
+
+Super Admin :
+  - No login necessary Navigate to the following [link](https://gray-bush-0c1bf981e.6.azurestaticapps.net/super-admin)
+
+University Admin :
+  - Username : jmustang@calpoly.edu
+  - Password : password123
+
+Teacher :
+  - Username : bklingen@calpoly.edu
+  - Password : password123
+
+Student :
+  - Username : lpoodle@calpoly.edu
+  - Password : 12345
+
+:::
 
 1. Navigate to the [login page]().
 2. Enter your email and password.
@@ -101,7 +126,9 @@ To add a create a new organization in the system:
     5. The organizations logo.
     6. The default primary and secondary colors for that organization.
     
-3. Click `ADD`.
+3. Click `Preview`.
+4. Review if all the information looks correct
+5. Click `Add` to add the organization to the system.
 
 #### Editing an Organizations
 
@@ -113,6 +140,7 @@ To add a create a new organization in the system:
 :::
 
 To edit details of an existing organization such as the number of seats or contract:
+
 1. Click `Details` on the organization you would like to edit.
 2. Click `Edit`.
 3. Select the text of the detail you would like to edit.
@@ -128,6 +156,14 @@ Once deleted all information linked with that organization will removed.
 There is **NO** way to revive an deleted organization.
 :::
 
+::: {.callout-warning}
+We kindly ask you to **only try deleting** organizations that you have created yourself during the alpha test.  Please **DO NOT** delete any of the provided organizations as they may be linked to other parts of the application still in development
+If you by any chance accidentally, delete any of provided organizations. please contact one of us over Slack or email as soon as possible so we can restore the database to its original configuration 
+Thank you!
+We appreciate your cooperation and taking your time out of your day to test our product.
+:::
+
+
 ::: {=html}
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
   <source src="../assets/gifs/delete_org.mp4" type="video/mp4"/>
@@ -136,6 +172,7 @@ There is **NO** way to revive an deleted organization.
 :::
 
 To remove an organization from the system:
+
 1. Click `Details` on the organization you would like to remove.
 2. Click `Delete Organization`.
 
@@ -195,6 +232,13 @@ You can change the number of seats a particular instructor has.
 There is currently **NO** confirmation for deletion of a teacher. Please delete with caution.
 Once deleted all information linked with that instructor will removed.
 There is **NO** way to revive an deleted instructor.
+:::
+
+::: {.callout-warning}
+We kindly ask you to **only try deleting** instructors that you have created yourself during the alpha test.  Please **DO NOT** delete any of the provided instructors as they may be linked to other parts of the application still in development.
+If you by any chance accidentally, delete any of provided instructors. please contact one of us over Slack or email as soon as possible so we can restore the database to its original configuration.
+Thank you!
+We appreciate your cooperation and taking your time out of your day to test our product.
 :::
 
 
@@ -336,6 +380,12 @@ To access the edit profile page:
 
 #### Changing Your Password
 
+::: {.callout-warning}
+We kindly ask you if you change the password to please change it back to the original password before finishing the test.  
+Thank you!
+We appreciate your cooperation and taking your time out of your day to test our product.
+:::
+
 ::: {=html}
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
   <source src="../assets/gifs/change_pwd.mp4" type="video/mp4"/>
@@ -355,10 +405,53 @@ After logging in as a teacher you will be directed to a teacher dashboard where 
 ### Classes
 
 ::: {.callout-note}
-This page is still work in progress and therefore adding classes is not supported.
+This page is still work in progress and therefore adding classes is currently not supported.
 :::
 
 The classes page will allows teachers to view, create and manage all their vet simulation courses.
+
+#### Viewing Classes
+
+All classes a teacher is currently instructing will be displayed as cards in the class page. 
+
+Each card will display the following course information:
+
+- CLass Name
+: Full name of the corresponding class.
+- Course Image
+: The profile image of the class.  If no image is selected during a creation, an default image will be displayed.
+- Section Number
+: An id for the course that uniquely identifies that particular section.
+
+Click on the card to select the course you would like to view and manage.
+
+#### Editing Class Details
+
+To change an particular detail about a course such as its name:
+
+1. Click the three dots () on the top right of the course card you are interested in editing.
+2. Go to the detail you would like to change.
+3. Click and update the input field\(s\) with the desired change\(s\).
+4. Click `Save`
+
+#### Deleting a Class
+
+::: {.callout-caution}
+Deleting an course is **permanent**. All students will automatically get unenrolled once the course has been deleted and all associated class data such as assignments and grades will be lost.  There is no way to recover an course once it has been deleted.
+:::
+
+::: {.callout-warning}
+We kindly ask you to **only try deleting** courses provided by the TEST suffix \(Ex : Anesthesia 101 -- TEST1\) during the alpha test.  Please **DO NOT** delete any of the other courses as they may be linked to other parts of the application still in development.
+If you by any chance accidentally, delete any of those courses. please contact one of us over Slack or email as soon as possible so we can restore the database to its original configuration.
+Thank you!
+We appreciate your cooperation and taking your time out of your day to test our product.
+:::
+
+To delete a course:
+
+1. Click the three dots () on the top right of the course card you are interested in deleting.
+2. Select `Delete`.
+3. If you are sure about removing this course, Click `Delete` again on the confirmation modal to permanently delete the course. 
 
 ### Navigating the Teacher Dashboard 
 
@@ -447,6 +540,13 @@ To change the assignment to published state:
 
 ::: {.callout-caution}
 Deleting an assignment is **permanent**. There is no way to recover an assignment once it has been deleted.
+:::
+
+::: {.callout-warning}
+We kindly ask you to **only try deleting** assignments that you have created yourself during the alpha test.  Please **DO NOT** delete any of the provided assignments as they may be linked to other parts of the application still in development.
+If you by any chance accidentally, delete any of provided assignments. please contact one of us over Slack or email as soon as possible so we can restore the database to its original configuration.
+Thank you!
+We appreciate your cooperation and taking your time out of your day to test our product.
 :::
 
 ::: {=html}
@@ -613,7 +713,9 @@ To view the details of a course
 A modal will popup displaying with the following relevant course information:
 
 - Description
-: A description of the course such as what is being taught and important learning objectives of teh course .
+: A description of the course such as what is being taught and important learning objectives of teh course.
+- Section Name
+: An string that that uniquely identifies that course section 
 - Instructor
 : The instructor that is teaching the course.
 - Access Code
