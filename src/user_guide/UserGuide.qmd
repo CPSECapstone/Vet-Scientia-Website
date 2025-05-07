@@ -700,6 +700,22 @@ The details pane of the course is not implemented. Clicking it will link to the 
 
 #### Adding a Course
 
+::: {.callout-tip}
+The following courses are available to enroll in
+
+- Anesthesia 101 -- TEST1
+: TKF099
+- Anesthesia 101 -- TEST2
+: HCS9E4
+- Anesthesia 101 -- TEST3
+: FKS6T7
+- Anesthesia 101 -- TEST4
+: E2X99A
+- Anesthesia 101 -- TEST5
+: A9M2C1
+
+:::
+
 1. Click `Join Class`.
 2. Enter in the access code provided to you by your instructor.
 3. Click `Join`.
@@ -727,10 +743,17 @@ A modal will popup displaying with the following relevant course information:
 - Number of the Students
 : The number of the students currently enrolled in the course.
 
-#### Unenrolled from a Course
+#### Unenrolling from a Course
 
 ::: {.callout-caution}
 Unenrolling from a course is permanent.  You may loose all your progress in a course if you un-enroll from a course.
+:::
+
+::: {.callout-warning}
+We kindly ask you to **only try unenrolling** from courses that you have joined yourself during the alpha test.  Please **DO NOT** unenroll from any of the provided courses as they may be linked to other parts of the application still in development.
+If you by any chance accidentally, unenroll from any of provided courses. please contact one of us over Slack or email as soon as possible so we can restore the database to its original configuration.
+Thank you!
+We appreciate your cooperation and taking time out of your day to test our product.
 :::
 
 To unroll from a course
