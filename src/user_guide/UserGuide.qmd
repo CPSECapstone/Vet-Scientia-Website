@@ -160,7 +160,7 @@ There is **NO** way to revive an deleted organization.
 We kindly ask you to **only try deleting** organizations that you have created yourself during the alpha test.  Please **DO NOT** delete any of the provided organizations as they may be linked to other parts of the application still in development
 If you by any chance accidentally, delete any of provided organizations. please contact one of us over Slack or email as soon as possible so we can restore the database to its original configuration 
 Thank you!
-We appreciate your cooperation and taking your time out of your day to test our product.
+We appreciate your cooperation and taking time out of your day to test our product.
 :::
 
 
@@ -238,7 +238,7 @@ There is **NO** way to revive an deleted instructor.
 We kindly ask you to **only try deleting** instructors that you have created yourself during the alpha test.  Please **DO NOT** delete any of the provided instructors as they may be linked to other parts of the application still in development.
 If you by any chance accidentally, delete any of provided instructors. please contact one of us over Slack or email as soon as possible so we can restore the database to its original configuration.
 Thank you!
-We appreciate your cooperation and taking your time out of your day to test our product.
+We appreciate your cooperation and taking time out of your day to test our product.
 :::
 
 
@@ -383,7 +383,7 @@ To access the edit profile page:
 ::: {.callout-warning}
 We kindly ask you if you change the password to please change it back to the original password before finishing the test.  
 Thank you!
-We appreciate your cooperation and taking your time out of your day to test our product.
+We appreciate your cooperation and taking time out of your day to test our product.
 :::
 
 ::: {=html}
@@ -444,7 +444,7 @@ Deleting an course is **permanent**. All students will automatically get unenrol
 We kindly ask you to **only try deleting** courses provided by the TEST suffix \(Ex : Anesthesia 101 -- TEST1\) during the alpha test.  Please **DO NOT** delete any of the other courses as they may be linked to other parts of the application still in development.
 If you by any chance accidentally, delete any of those courses. please contact one of us over Slack or email as soon as possible so we can restore the database to its original configuration.
 Thank you!
-We appreciate your cooperation and taking your time out of your day to test our product.
+We appreciate your cooperation and taking time out of your day to test our product.
 :::
 
 To delete a course:
@@ -546,7 +546,7 @@ Deleting an assignment is **permanent**. There is no way to recover an assignmen
 We kindly ask you to **only try deleting** assignments that you have created yourself during the alpha test.  Please **DO NOT** delete any of the provided assignments as they may be linked to other parts of the application still in development.
 If you by any chance accidentally, delete any of provided assignments. please contact one of us over Slack or email as soon as possible so we can restore the database to its original configuration.
 Thank you!
-We appreciate your cooperation and taking your time out of your day to test our product.
+We appreciate your cooperation and taking time out of your day to test our product.
 :::
 
 ::: {=html}
