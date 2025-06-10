@@ -2,7 +2,7 @@
 title: "User Guide"
 date: "today"
 author: "Vet Scientia Team"
-version: "Alpha"
+version: "Beta"
 css: ../styles.css
 format: 
    html:
@@ -31,7 +31,9 @@ The VetScientia web dashboard can be accessed using the following [link](https:/
 ### Sign-up
 
 ::: {.callout-tip}
+
 Currently only the sign-up for teacher works independently.  Create a teacher from the university admin dashboard then signup here.
+
 :::
 
 1. Ask your administrator to register you into the system and provide them with your `full name` and `email address`.
@@ -41,7 +43,13 @@ Currently only the sign-up for teacher works independently.  Create a teacher fr
     - Super admins will be given their credentials.
 2. Navigate to the [sign-up page](https://gray-bush-0c1bf981e.6.azurestaticapps.net/signup) of our application.
 
-![](../assets/signup/signup1.png)
+::: {=html}
+
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/signup.mp4" type="video/mp4"/>
+</video>
+
+:::
 
 3. Enter in your credentials:
 
@@ -56,9 +64,12 @@ Currently only the sign-up for teacher works independently.  Create a teacher fr
         4. Must have at least one capital and one lowercase character.
     5. Access Code for the organization.
 
-![](../assets/signup/signup2.png)
-
 4. Click `Sign-up`.
+5. You will be directed to an email verification screen. 
+
+    1. Obtain the 6 digit email verification code from your ibox of the provided email
+    2. Enter in the verification code
+    3. Click Verify to complete the account creation
 
 ### Login
 
@@ -66,24 +77,25 @@ Currently only the sign-up for teacher works independently.  Create a teacher fr
 
 For testing purposes please use the following accounts:
 
-Super Admin :
-  - No login necessary Navigate to the following [link](https://gray-bush-0c1bf981e.6.azurestaticapps.net/super-admin)
+- Super Admin :
+  - Username : asuperadmin@vetscientia.com
+  - Password :  VetScientia123!
 
-University Admin :
+- University Admin :
   - Username : jmustang@calpoly.edu
   - Password : password123
 
-Teacher :
+- Teacher :
   - Username : bklingen@calpoly.edu
   - Password : password123
 
-Student :
+- Student :
   - Username : lpoodle@calpoly.edu
   - Password : 12345
 
 :::
 
-1. Navigate to the [login page]().
+1. Navigate to the [login page](https://gray-bush-0c1bf981e.6.azurestaticapps.net/login).
 2. Enter your email and password.
 3. Click `login`.
 
@@ -148,10 +160,23 @@ To edit details of an existing organization such as the number of seats or contr
 5. Click `Save`.
 6. Dismiss the modal by clicking anywhere outside it.
 
+#### Viewing The Contract 
+
+::: {=html}
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/View-Contract.mp4" type="video/mp4"/>
+</video>
+
+:::
+
+To preview the contract of an organization you have created previously:
+
+1. Click `Details` on the organization you would like to view the contract for.
+2. Click the `Download Contract` button to view the contract pdf in a new browser window
+
 #### Deleting an Organization
 
 ::: {.callout-caution}
-There is currently **NO** confirmation for deletion of a organization. Please delete with caution.
 Once deleted all information linked with that organization will removed.
 There is **NO** way to revive an deleted organization.
 :::
@@ -166,7 +191,7 @@ We appreciate your cooperation and taking time out of your day to test our produ
 
 ::: {=html}
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
-  <source src="../assets/gifs/delete_org.mp4" type="video/mp4"/>
+  <source src="../assets/gifs/Delete-Org.mp4" type="video/mp4"/>
 </video>
 
 :::
@@ -175,6 +200,78 @@ To remove an organization from the system:
 
 1. Click `Details` on the organization you would like to remove.
 2. Click `Delete Organization`.
+
+### Game Simulation Page
+
+The game version dashboard allows a super admin to manage the versions of the simulation as the product gets updated and improved based on feedback. Once a developer finishes a simulation update in Unity, they can send the build to the super admin to apply it in the application.
+
+When clicked, the game version dashboard presents a table showing a version history of the available (non-deleted) versions of the anesthesia simulation along with each version's accompanying information.
+
+The following information is provided for each row (simulation version) in the table.
+
+::: {.callout-note}
+
+The green dot 🟢 next to a version ID indicates this is the latest version and one currently deployed in the application.
+
+:::
+
+- Version
+: An unique identifier for that build of the simulation.
+- Build Time
+: The timestamp for when that version was uploaded to the system in UTC time.
+- Change Log
+: A description of what has changed in this version of the simulation.
+
+#### Uploading a new Simulation Version
+
+To upload and deploy a new version of the simulation:
+
+::: {.callout-note}
+
+Archive files such as zip or tarball formats containing the game files are not supported.
+
+To ensure a successful upload, please make sure the game files are named exactly as described below. Capitalization and file extensions do matter:
+
+:::
+
+1. Click `Add Simulation`.
+2. Enter a brief description of any new features or bug fixes in the change log.
+3. Drag and drop, or click to select from your device's file explorer, the new simulation build files.
+
+
+  - There should be exactly 4 files per build. They should be named as follows:
+
+      1. `Build.data.br`
+      2. `Build.framework.js.br`
+      3. `Build.loader.js`
+      4. `Build.wasm.br`
+
+  - You can either directly select all 4 files or a directory containing only these 4 files in the modal.
+
+::: {.callout-caution}
+
+The upload process can take a few seconds to 1–2 minutes depending on various factors, including your internet connection speed, current load on our backend servers, and AWS traffic.
+
+Please do not close the window or the modal while the spinning indicator is present, or your files may not be fully uploaded.
+
+:::
+
+4. Click `Upload Simulation` to post and deploy the new version to the dashboard.
+
+#### Restoring an previous Simulation Version
+
+In the event that a simulation update introduces an undesirable change, you can restore to an archived version of the simulation:
+
+::: {.callout-caution}
+
+The restore process can take a few seconds to 1–2 minutes depending on various factors, including your internet connection speed, current load on our backend servers, and AWS traffic.
+
+Please do not close the window or the modal while the spinning indicator is present, or your restore may not fully complete
+
+:::
+
+1. Scroll to the version of the simulation you would like to restore to
+2. Click on the restore icon on the right hand side of the table row to restore the deployed simulation to that build version.
 
 ## University Admin
 
@@ -310,7 +407,9 @@ This page will show the total number of seats purchased by the organization and 
 ### Feedback
 
 ::: {.callout-note}
+
 Please refer to [student-feedback](#dashboard-feedback) for backend status of this feature.
+
 :::
 
 
@@ -331,7 +430,9 @@ The feedback table provides an overview of the latest feedback from students and
 ### Questions
 
 ::: {.callout-note collapse="true"}
+
 Only, the university side of this feature has been implemented. There is currently no way for super-admins to view the questions posted on this page.
+
 :::
 
 The question page allows university admins to contact the super admin for any questions or concerns they may have.
@@ -404,9 +505,6 @@ After logging in as a teacher you will be directed to a teacher dashboard where 
 
 ### Classes
 
-::: {.callout-note}
-This page is still work in progress and therefore adding classes is currently not supported.
-:::
 
 The classes page will allows teachers to view, create and manage all their vet simulation courses.
 
@@ -425,14 +523,57 @@ Each card will display the following course information:
 
 Click on the card to select the course you would like to view and manage.
 
+#### Adding a Course
+
+::: {=html}
+
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/Add-Class-Teacher.mp4" type="video/mp4"/>
+</video>
+
+:::
+
+<br/>
+
+To create a new course in the system:
+
+1. Click `Add Class`.
+2. Enter in the following information for the class:
+
+  - A name for the course.
+  - A section number for the course. \(Identifier for the class during teh current quarter or semester \).
+  -  A brief description of what concepts will be taught in the course.
+  -  The start date of the course.
+  -  The end date for the course.
+  - \(Optionally\)[^2] An image for the course , that will be displayed on the student and teacher dashboards when viewing the course dashboard.
+
+3. Click `Add` to create the new course.
+
+
+
+[^2]: If no image is provided for the course, an default VetScientia Image will shown instead.
+
+
+
 #### Editing Class Details
 
-To change an particular detail about a course such as its name:
+::: {=html}
 
-1. Click the three dots () on the top right of the course card you are interested in editing.
-2. Go to the detail you would like to change.
-3. Click and update the input field\(s\) with the desired change\(s\).
-4. Click `Save`
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/Update-Class.mp4" type="video/mp4"/>
+</video>
+
+:::
+
+<br/>
+
+To change an particular detail about a course that you are currently instructing such as its name:
+
+1. Click the three dots on the top right of the course card you are interested in editing.
+2. Click `Edit`
+3. Go to the detail you would like to change.
+4. Click and update the input field\(s\) with the desired change\(s\).
+5. Click `Save`
 
 #### Deleting a Class
 
@@ -447,6 +588,16 @@ Thank you!
 We appreciate your cooperation and taking time out of your day to test our product.
 :::
 
+::: {=html}
+
+<video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
+  <source src="../assets/gifs/Delete-Course.mp4" type="video/mp4"/>
+</video>
+
+:::
+
+<br/>
+
 To delete a course:
 
 1. Click the three dots () on the top right of the course card you are interested in deleting.
@@ -457,8 +608,67 @@ To delete a course:
 
 Once you have selected a course, you will have a variety of accessible pages which can be navigated between using the left-hand side nav bar.
 
-You can always return to the courses page by clicking `dashboard`, the red scholar icon, or the [teacher dashboard URL](https://gray-bush-0c1bf981e.6.azurestaticapps.net/teacher-dashboard/add-class).
+You can always return to the courses page by clicking `dashboard`, the red scholar icon, or the [teacher dashboard URL](https://gray-bush-0c1bf981e.6.azurestaticapps.net/teacher-dashboard).
 
+### Course Information Dashboard
+
+Once a course has been selected you will be directed to the Course Information page.
+
+The Course Information Dashboard provides an overview of the students currently enrolled in the course, the class access code and a way to enroll and unenroll students.
+
+Each student enrolled is represented in a card with the following available information.
+
+- Name
+: The full name of the student currently enrolled.
+- Email
+: The email address of the student currently enrolled.
+
+#### Enrolling A Student Into a Course 
+
+There are two primary ways to enroll an student in a course:
+
+1. Through Access Codes and the Student Portal.
+2. Manually on the Teacher Dashboard.
+
+##### Adding a New Student Through Access Code
+
+To enroll a student through access codes:
+
+1. Locate the access code on the top center of the course information page.
+2. Click the Copy icon ![](../assets/clipboard.svg){width="20px"}.
+3. Distribute the access code to your students.
+4. The remaining steps of joining a course can be found on [student user guide](#adding-a-course-1).
+
+##### Adding a New Student Manually
+
+::: {.callout-note}
+
+Please note that student account creation is still being finalized.  As of right now you can only add students who have already had their accounts created.
+
+:::
+
+To add a student manually through the teacher dashboard:
+
+1. Click `Add Student`.
+2.  Enter the following information for the student.
+
+  - First Name
+  : The first name of the student you would like to add.
+  - Last Name
+  : The last name of the student you would like to add.
+  - Email
+  : The email address of the student you would like to add.
+
+3. Click `Add` to enroll the student into the course.
+
+#### Un-Enrolling A Student From a Course 
+
+To delete a student from a course, on the teacher side:
+
+1. Select the card of the student you would like to un-enroll.
+2. Click on the three dots on the three dots ![](../assets/vertical-ellipsis.svg){width="20px"} in top right corner of the card
+3. Select `Delete`
+4. Confirm you would like to remove the student from the course.
 
 ### Assignments
 
@@ -496,13 +706,13 @@ Each assignment card will have the following information:
 1. Click the blue `Create Assignment` button on the top center of the page.
 2. Enter the following details of the assignment:
     1. Assignment Name.
-    2. Due Date[^2] for the assignment.
+    2. Due Date[^3] for the assignment.
     3. A brief description of the assignment.
     4. The simulation this assignment is linked to.
 3. To save this assignment as a draft \(unpublished\) Click `Save`.
 4. To save and publish this assignment, Click `Publish`.
 
-[^2]: All assignments are to set to be due at 23:59:59 of that day.
+[^3]: All assignments are to set to be due at 23:59:59 of that day.
 
 #### Editing Assignments Details
 
@@ -668,7 +878,9 @@ The course student pages allows teachers to view all currently enrolled students
 #### Generating class codes
 
 ::: {.callout-note}
+
 Only the frontend part of the page is currently operational. Please refer to [adding student course](#adding-a-course) for more information.
+
 :::
 
 ::: {=html}
@@ -692,7 +904,7 @@ After logging in as a student, you will be brought to the student dashboard wher
 
 The main course dashboard provides an overview of all the courses you are enrolled in and have added to your dashboard. Click the course to select the course to view its assignments and complete its simulation.
 
-::: {.callout-note }
+::: {.callout-note}
 
 The details pane of the course is not implemented. Clicking it will link to the same page as the rest of the card.
 
@@ -813,7 +1025,7 @@ To access the practice environment:
 
 The discussion board is an interactive area where students can discuss and get help with assignments & simulations.
 
-::: {.callout-note }
+::: {.callout-note}
 Sorting and filtering features will be added to future releases. 
 :::
 
@@ -906,10 +1118,10 @@ The dashboard feedback area allows students to submit bugs, new feature requests
 
 #### Creating a New Feedback
 
-::: {.callout-warning }
+::: {.callout-warning}
 This feature does not save the feedback currently. An error will occur while doing so. This is actively being worked on and should be implemented by the next release.
 :::
-
+`
 1. Click `Add Feedback` on the top right-hand corner of the page.
 2. Type in the desired bug or feedback.
 3. Click `Submit Feedback`.
