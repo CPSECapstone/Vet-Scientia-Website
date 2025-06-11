@@ -495,4 +495,3 @@ jobs:
 [^4]: For production you will select `VetScientia` organization instead of `CPSE Capstone`.  We are using `CPSE Capstone` because it allows the use of the education plan features.
 
 
-# Simulation
