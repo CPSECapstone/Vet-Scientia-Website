@@ -46,7 +46,7 @@ Currently only the sign-up for teacher works independently.  Create a teacher fr
 ::: {=html}
 
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
-  <source src="../assets/gifs/Signup.mp4" type="video/mp4"/>
+  <source src="../assets/gifs/Signup2.mp4" type="video/mp4"/>
 </video>
 
 :::
