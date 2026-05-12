@@ -1,0 +1,31 @@
+site_name: Vet Scientia 
+site_description: User and deployment guides for Vet Scientia
+
+theme:
+  name: material
+  palette:
+    primary: blue
+    accent: light blue
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - toc.follow
+
+nav:
+  - Home: index.md
+  - User Guide: user-guide.md
+  - Deployment Guide: deployment.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css

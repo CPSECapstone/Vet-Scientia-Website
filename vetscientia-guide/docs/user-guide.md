@@ -1,22 +1,3 @@
----
-title: "User Guide"
-date: "today"
-author: "Vet Scientia Team"
-version: "Beta"
-css: ../styles.css
-format: 
-   html:
-     embed-resources: true
-     toc: true
-     toc-depth: 3
-     number-sections: true
-editor: source
-execute: 
-  error: true
-  echo: true
-  message: false
-  warning: false
----
 
 # Introduction
 
@@ -24,19 +5,20 @@ The following document is a guide for students, teachers, and admins alike to gu
 
 # Web Portal
 
-The VetScientia web dashboard can be accessed using the following [link](https://gray-bush-0c1bf981e.6.azurestaticapps.net) or typing `https://gray-bush-0c1bf981e.6.azurestaticapps.net` into your browser URL.
+The VetScientia web dashboard can be accessed using the following [link](https://gray-bush-0c1bf981e.6.azurestaticapps.net){ target="_blank" rel="noopener" } or typing `https://gray-bush-0c1bf981e.6.azurestaticapps.net` into your browser URL.
 
 ## Account Management
 
 ### Student Sign-up
 
-::: {.callout-tip}
+<div class="admonition tip" markdown="1">
+<p class="admonition-title">Tip</p>
 
 Use the demo to get an idea of the UI and tryout the simulator instead of making an account.
 
-:::
+</div>
 
-1. Navigate to the [sign-up page](https://gray-bush-0c1bf981e.6.azurestaticapps.net/signup) of our application.
+1. Navigate to the [sign-up page](https://gray-bush-0c1bf981e.6.azurestaticapps.net/signup){ target="_blank" rel="noopener" } of our application.
 
 
 2. Fill in the sign up textboxes
@@ -50,7 +32,8 @@ Use the demo to get an idea of the UI and tryout the simulator instead of making
 
 ### Login
 
-:::{.callout-tip}
+<div class="admonition tip" markdown="1">
+<p class="admonition-title">Tip</p>
 
 For testing purposes please use the following accounts:
 
@@ -70,9 +53,9 @@ For testing purposes please use the following accounts:
   - Username : demostudent@calpoly.edu
   - Password : testpassword
 
-:::
+</div>
 
-1. Navigate to the [login page](https://gray-bush-0c1bf981e.6.azurestaticapps.net/login).
+1. Navigate to the [login page](https://gray-bush-0c1bf981e.6.azurestaticapps.net/login){ target="_blank" rel="noopener" }.
 2. Enter your email and password.
 3. Click `login`.
 
@@ -82,28 +65,30 @@ For testing purposes please use the following accounts:
   <source src="../assets/gifs/Reset-Password.mp4" type="video/mp4"/>
 </video>
 
-::: {.callout-note}
+<div class="admonition note" markdown="1">
+<p class="admonition-title">Note</p>
 
 If you have lost access to your account email or forgotten the email for your account, please contact your administrator to recover your account
 
-:::
+</div>
 
 In the unfortunate event you have forgotten your account password, you can reset your credentials by completing the following procedure:
 
-1. Go to the [login page](https://gray-bush-0c1bf981e.6.azurestaticapps.net/signin) of the application
+1. Go to the [login page](https://gray-bush-0c1bf981e.6.azurestaticapps.net/signin){ target="_blank" rel="noopener" } of the application
 2. Click `Forget Password`.
 3. Enter the email address associate with your account
 4. Click `Send Reset Code`
 5. An 16 character long password reset token will be sent to the requested email address if an account has been found
 
-::: {.callout-tip}
+<div class="admonition tip" markdown="1">
+<p class="admonition-title">Tip</p>
 
 You can also use the link directly in your email to autofill the reset token directly into our site.
 
-:::
+</div>
 
 6. Return the password reset page and enter in received 16 character token
-7. Enter in a new password for your account.  As a reminder please follow our [password requirement specifications](#password-requirements)
+7. Enter in a new password for your account. As a reminder, follow the application's password requirement specifications.
 8. Click `Reset Password`
 
 ## Super Admin
@@ -184,17 +169,19 @@ To preview the contract of an organization you have created previously:
 
 #### Deleting an Organization
 
-::: {.callout-caution}
+<div class="admonition danger" markdown="1">
+<p class="admonition-title">Caution</p>
 Once deleted all information linked with that organization will removed.
 There is **NO** way to revive an deleted organization.
-:::
+</div>
 
-::: {.callout-warning}
+<div class="admonition warning" markdown="1">
+<p class="admonition-title">Warning</p>
 We kindly ask you to **only try deleting** organizations that you have created yourself during the alpha test.  Please **DO NOT** delete any of the provided organizations. 
 If you by any chance accidentally, delete any of provided organizations. please contact one of us over Slack or email as soon as possible so we can restore the database to its original configuration 
 Thank you!
 We appreciate your cooperation and taking time out of your day to test our product.
-:::
+</div>
 
 To remove an organization from the system:
 
@@ -209,11 +196,12 @@ When clicked, the game version dashboard presents a table showing a version hist
 
 The following information is provided for each row (simulation version) in the table.
 
-::: {.callout-note}
+<div class="admonition note" markdown="1">
+<p class="admonition-title">Note</p>
 
 The green dot 🟢 next to a version ID indicates this is the latest version and one currently deployed in the application.
 
-:::
+</div>
 
 - Version
 : An unique identifier for that build of the simulation.
@@ -224,23 +212,22 @@ The green dot 🟢 next to a version ID indicates this is the latest version and
 
 #### Uploading a new Simulation Version
 
-::: {=html}
 
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
   <source src="../assets/gifs/Add-Sim.mp4" type="video/mp4"/>
 </video>
 
-:::
 
 To upload and deploy a new version of the simulation:
 
-::: {.callout-note}
+<div class="admonition note" markdown="1">
+<p class="admonition-title">Note</p>
 
 Archive files such as zip or tarball formats containing the game files are not supported.
 
 To ensure a successful upload, please make sure the game files are named exactly as described below. Capitalization and file extensions do matter:
 
-:::
+</div>
 
 
 1. Click `Add Simulation`.
@@ -257,35 +244,35 @@ To ensure a successful upload, please make sure the game files are named exactly
 
   - You can either directly select all 4 files or a directory containing only these 4 files in the modal.
 
-::: {.callout-caution}
+<div class="admonition danger" markdown="1">
+<p class="admonition-title">Caution</p>
 
 The upload process can take a few seconds to 1–2 minutes depending on various factors, including your internet connection speed, current load on our backend servers, and AWS traffic.
 
 Please do not close the window or the modal while the spinning indicator is present, or your files may not be fully uploaded.
 
-:::
+</div>
 
 4. Click `Upload Simulation` to post and deploy the new version to the dashboard.
 
 #### Restoring an previous Simulation Version
 
-::: {=html}
 
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
   <source src="../assets/gifs/Update-Sim.mp4" type="video/mp4"/>
 </video>
 
-:::
 
 In the event that a simulation update introduces an undesirable change, you can restore to an archived version of the simulation:
 
-::: {.callout-caution}
+<div class="admonition danger" markdown="1">
+<p class="admonition-title">Caution</p>
 
 The restore process can take a few seconds to 1–2 minutes depending on various factors, including your internet connection speed, current load on our backend servers, and AWS traffic.
 
 Please do not close the window or the modal while the spinning indicator is present, or your restore may not fully complete
 
-:::
+</div>
 
 1. Scroll to the version of the simulation you would like to restore to
 2. Click on the restore icon on the right hand side of the table row to restore the deployed simulation to that build version.
@@ -305,12 +292,10 @@ Each entry will display the instructor's name and the number of seats assigned t
 
 You can change the number of seats a particular instructor has.
 
-::: {=html}
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
   <source src="../assets/gifs/change_seats.mp4" type="video/mp4"/>
 </video>
 
-:::
 
 
 1. Scroll to the row with the instructor you would like to remove.
@@ -320,12 +305,13 @@ You can change the number of seats a particular instructor has.
 
 #### Removing an Instructor
 
-::: {.callout-warning}
+<div class="admonition warning" markdown="1">
+<p class="admonition-title">Warning</p>
 We kindly ask you to **only try deleting** instructors that you have created yourself during the alpha test.  Please **DO NOT** delete any of the provided instructors. 
 If you by any chance accidentally, delete any of provided instructors. please contact one of us over Slack or email as soon as possible so we can restore the database to its original configuration.
 Thank you!
 We appreciate your cooperation and taking time out of your day to test our product.
-:::
+</div>
 
 
 1. Scroll to the row with the instructor you would like to remove.
@@ -350,32 +336,30 @@ Displays the past payment history for this university, such as previous year sub
 
 ### Domains
 
-::: {.callout-note}
+<div class="admonition note" markdown="1">
+<p class="admonition-title">Note</p>
 While the frontend implementation of this feature has been implemented, the backend part is not. Therefore, this rule is not enforced.
-:::
+</div>
 
 This page allows the university admins to turn on and off domain checking.  
 Each row will display the domain and whether it's allowed in this organization.
 
-::: {=html}
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
   <source src="../assets/gifs/turn_on_off_domain.mp4" type="video/mp4"/>
 </video>
 
-:::
 
 #### Adding a domain
 
-::: {.callout-warning}
+<div class="admonition warning" markdown="1">
+<p class="admonition-title">Warning</p>
 There's currently no way to remove a domain once it has been added. Please currently add with caution.
-:::
+</div>
 
-::: {=html}
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
   <source src="../assets/gifs/add_domain.mp4" type="video/mp4"/>
 </video>
 
-:::
 
 To add a domain to the university: 
 
@@ -389,20 +373,19 @@ This page will show the total number of seats purchased by the organization and 
 
 ### Questions
 
-::: {.callout-note collapse="true"}
+<div class="admonition note" markdown="1">
+<p class="admonition-title">Note</p>
 
 Only, the university side of this feature has been implemented. There is currently no way for super-admins to view the questions posted on this page.
 
-:::
+</div>
 
 The question page allows university admins to contact the super admin for any questions or concerns they may have.
 
-::: {=html}
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
   <source src="../assets/gifs/new_question_uni_admin.mp4" type="video/mp4"/>
 </video>
 
-:::
 
 To submit a message to a super-admin:
 
@@ -427,12 +410,10 @@ To access the edit profile page:
 
 #### Updating Your Name
 
-::: {=html}
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
   <source src="../assets/gifs/change_name.mp4" type="video/mp4"/>
 </video>
 
-:::
 
 
 1. Select the input field next to your name \(first/last\).
@@ -441,11 +422,12 @@ To access the edit profile page:
 
 #### Changing Your Password
 
-::: {.callout-warning}
+<div class="admonition warning" markdown="1">
+<p class="admonition-title">Warning</p>
 We kindly ask you if you change the password to please change it back to the original password before finishing the test.  
 Thank you!
 We appreciate your cooperation and taking time out of your day to test our product.
-:::
+</div>
 
 1. Select the input field next to your password.
 2. Enter in your new password.
@@ -512,15 +494,17 @@ To change an particular detail about a course that you are currently instructing
 
 #### Deleting a Class
 
-::: {.callout-caution}
+<div class="admonition danger" markdown="1">
+<p class="admonition-title">Caution</p>
 Deleting a course is **permanent**. All students will automatically get unenrolled once the course has been deleted and all associated class data such as assignments and grades will be lost.  There is no way to recover an course once it has been deleted.
-:::
+</div>
 
-::: {.callout-warning}
+<div class="admonition warning" markdown="1">
+<p class="admonition-title">Warning</p>
 Please don't delete our only course.
 Thank you!
 We appreciate your cooperation and taking time out of your day to test our product.
-:::
+</div>
 
 To delete a course (dont):
 
@@ -553,16 +537,16 @@ Each student enrolled is represented in a card with the following available info
 To enroll a student through access codes:
 
 1. Click on the class access codes button
-2. Click the Copy icon ![](../assets/clipboard.svg){width="20px"} for one of the access codes.
+2. Click the Copy icon ![](assets/clipboard.svg){ width="20" } for one of the access codes.
 3. Distribute the access code to a student you want to add.
-4. The remaining steps of joining a course can be found on [student user guide](#adding-a-course-1).
+4. The remaining steps of joining a course can be found in the [student user guide](#adding-a-course_1){ target="_blank" rel="noopener" }.
 
 #### Un-Enrolling A Student From a Course 
 
 To delete a student from a course, on the teacher side:
 
 1. Select the card of the student you would like to un-enroll.
-2. Click on the three dots on the three dots ![](../assets/vertical-ellipsis.svg){width="20px"} in top right corner of the card
+2. Click on the three dots on the three dots ![](assets/vertical-ellipsis.svg){ width="20" } in top right corner of the card
 3. Select `Delete`
 4. Confirm you would like to remove the student from the course.
 
@@ -613,9 +597,10 @@ To edit the details of an existing assignment \(published or draft\) such as cha
 
 #### Publishing an Assignment
 
-::: {.callout-caution}
+<div class="admonition danger" markdown="1">
+<p class="admonition-title">Caution</p>
 You can not change a published assignment back to draft form. To unpublish an assignment, you will need to delete the assignment and recreate it in draft form.
-:::
+</div>
 
 To change the assignment to published state:
 1. Click the blue `Edit` button next to the assignment you wish to get published.
@@ -623,16 +608,18 @@ To change the assignment to published state:
 
 #### Deleting Assignments
 
-::: {.callout-caution}
+<div class="admonition danger" markdown="1">
+<p class="admonition-title">Caution</p>
 Deleting an assignment is **permanent**. There is no way to recover an assignment once it has been deleted.
-:::
+</div>
 
-::: {.callout-warning}
+<div class="admonition warning" markdown="1">
+<p class="admonition-title">Warning</p>
 We kindly ask you to **only try deleting** assignments that you have created yourself during the alpha test.  Please **DO NOT** delete any of the provided assignments as they may be linked to other parts of the application still in development.
 If you by any chance accidentally, delete any of provided assignments. please contact one of us over Slack or email as soon as possible so we can restore the database to its original configuration.
 Thank you!
 We appreciate your cooperation and taking time out of your day to test our product.
-:::
+</div>
 
 1. Click the three dots on the top right of the assignment you wish to delete.
 2. Select `Delete`.
@@ -670,9 +657,10 @@ To write feedback:
 3. Any previously written feedback will be inside the text box. To edit existing feedback simply make the changes to the text box.
 4. Click `Submit Feedback` to upload and save the feedback for the student to view.
  
-::: {.callout-tip}
+<div class="admonition tip" markdown="1">
+<p class="admonition-title">Tip</p>
 To return back to the assignment's detail page, use the browser's back button.
-:::
+</div>
 
 ### Course Grades
 
@@ -703,7 +691,7 @@ The course student pages allows teachers to view all currently enrolled students
 
 The discussion board is an interactive area where students and instructors converse about assignments, simulations and other course related topics
 
-For usage of the discussion board, view the [student discussion board](#discussion-board-1)
+For usage of the discussion board, view the [student discussion board](#discussion-board_1){ target="_blank" rel="noopener" }
 
 ## Student
 
@@ -745,16 +733,18 @@ A modal will popup displaying with the following relevant course information:
 
 #### Unenrolling from a Course
 
-::: {.callout-caution}
+<div class="admonition danger" markdown="1">
+<p class="admonition-title">Caution</p>
 Unenrolling from a course is permanent.  You may lose all your progress in a course if you un-enroll from a course.
-:::
+</div>
 
-::: {.callout-warning}
+<div class="admonition warning" markdown="1">
+<p class="admonition-title">Warning</p>
 We kindly ask you to **only try unenrolling** from courses that you have joined yourself during the alpha test.  Please **DO NOT** unenroll from any of the provided courses as they may be linked to other parts of the application still in development.
 If you by any chance accidentally, unenroll from any of provided courses. please contact one of us over Slack or email as soon as possible so we can restore the database to its original configuration.
 Thank you!
 We appreciate your cooperation and taking time out of your day to test our product.
-:::
+</div>
 
 To unroll from a course
 
@@ -776,7 +766,7 @@ The assignment page will be the first page you land on when you select a course.
 
 1. Click on an uncompleted assignment 
 2. Click `Start Simulation`.
-3. Wait for the simulation to load, and once loaded, refer to [Simulation](#simulation) for how to interact with the VetSim.
+3. Wait for the simulation to load, and once loaded, refer to [Simulation](#simulation){ target="_blank" rel="noopener" } for how to interact with the VetSim.
 
 #### Practice Guide
 
@@ -792,9 +782,10 @@ To access the practice environment:
 
 The discussion board is an interactive area where students can discuss and get help with assignments & simulations.
 
-::: {.callout-note}
+<div class="admonition note" markdown="1">
+<p class="admonition-title">Note</p>
 Sorting and filtering features will be added to future releases. 
-:::
+</div>
 
 Each post displayed will have the following information:
 
@@ -813,12 +804,10 @@ Each post displayed will have the following information:
 
 #### Generating a New Post
 
-::: {=html}
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
   <source src="../assets/gifs/create_new_discussion_post.mp4" type="video/mp4"/>
 </video>
 
-:::
 
 To create a new post:
 
@@ -838,34 +827,28 @@ To create a new post:
 
 #### Viewing Replies
 
-::: {=html}
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
   <source src="../assets/gifs/viewRepliesDiscussion.mp4" type="video/mp4"/>
 </video>
 
-:::
 
 To view a reply to a post, simply click the title of the post you are interested in.
 
 #### Like a Post
 
-::: {=html}
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
   <source src="../assets/gifs/like_post.mp4" type="video/mp4"/>
 </video>
 
-:::
 
-Click the like button ![](../assets/like_icon.png){width=20} to like a post. Click the like button again to remove the like.
+Click the like button ![](assets/like_icon.png){ width="20" } to like a post. Click the like button again to remove the like.
 
 #### Creating a Reply
 
-::: {=html}
 <video autoplay loop muted playsinline style="max-width: 100%; margin-top: 1rem;">
   <source src="../assets/gifs/replydiscussion.mp4" type="video/mp4"/>
 </video>
 
-:::
 
 There are two ways to reply to a post:
 
@@ -876,7 +859,7 @@ There are two ways to reply to a post:
 
 ## Using the Simulator
 
-Test out using the simulation with [Vet Scientia Demo](https://vs-capstone.itch.io/vs-demo).
+Test out using the simulation with [Vet Scientia Demo](https://vs-capstone.itch.io/vs-demo){ target="_blank" rel="noopener" }.
 
 To focus on the animal, click the animal.
 

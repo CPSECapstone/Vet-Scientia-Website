@@ -1,0 +1,16 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd vetscientia-guide
+        - pip install -r requirements.txt
+    build:
+      commands:
+        - mkdocs build
+  artifacts:
+    baseDirectory: vetscientia-guide/site
+    files:
+      - '**/*'
+  cache:
+    paths: []

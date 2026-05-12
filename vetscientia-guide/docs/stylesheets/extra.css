@@ -1,0 +1,23 @@
+.md-typeset video {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  margin: 1.25rem auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.6rem 1.8rem rgba(15, 23, 42, 0.16);
+}
+
+.md-typeset img[width="20"] {
+  height: 1.1em;
+  vertical-align: -0.2em;
+}
+
+.md-typeset h1,
+.md-typeset h2 {
+  color: #0b3d7c;
+}
+
+.md-header,
+.md-tabs {
+  background: linear-gradient(90deg, #2761b2 0%, #5083c7 100%);
+}
