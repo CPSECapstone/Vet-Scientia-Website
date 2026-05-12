@@ -6,7 +6,7 @@ This repo contains a Vite/React frontend and an Express/MongoDB backend managed 
 
 ## Prerequisites
 
-- Node.js and npm installed. Use a current Node LTS version if you do not have a project-specific version from the team.
+- Node.js and npm installed.
 - Git installed.
 - Access to the project environment variables from Confluence.
 - Access to a MongoDB database for backend development.
