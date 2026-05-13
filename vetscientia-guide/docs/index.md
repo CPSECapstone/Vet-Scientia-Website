@@ -1,8 +1,7 @@
-# Vet Scientia Guide
+# Vet Scientia
 
-Welcome to the Vet Scientia documentation site.
+Vet Scientia is a web-based veterinary simulation platform for practicing clinical decision-making before entering the clinic. The application gives students, teachers, and administrators role-specific tools for managing courses, assignments, simulation access, performance review, and discussion workflows.
 
-## Guides
+![A veterinary anesthesia training scenario](assets/cover_image.jpg){ .home-hero-image }
 
-- [User Guide](user-guide.md){ target="_blank" rel="noopener" }: account setup, portal workflows, role-based dashboards, and simulation usage.
-- [Development Guide](deployment.md){ target="_blank" rel="noopener" }: local setup instructions.
+Use the navigation above to open the user guide, deployment guide, troubleshooting notes, or role-specific documentation.

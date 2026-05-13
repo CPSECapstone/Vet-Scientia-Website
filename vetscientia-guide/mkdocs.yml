@@ -7,15 +7,28 @@ theme:
     primary: blue
     accent: light blue
   features:
+    - navigation.tabs
+    - navigation.indexes
     - navigation.sections
     - navigation.top
     - search.highlight
     - search.suggest
     - toc.follow
+    - content.code.copy
 
 nav:
   - Home: index.md
-  - User Guide: user-guide.md
+  - User Guide:
+      - Overview: user-guide.md
+      - Getting Started: getting-started.md
+      - Super Admin: super-admin.md
+      - University Admin: university-admin.md
+      - Clinic Admin: clinic-admin.md
+      - Teacher: teacher.md
+      - Student: student.md
+      - Simulation: simulation.md
+      - Troubleshooting: troubleshooting.md
+      - Testing Notes: testing-notes.md
   - Deployment Guide: deployment.md
 
 markdown_extensions:
