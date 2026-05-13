@@ -29,7 +29,7 @@ nav:
       - Simulation: simulation.md
       - Troubleshooting: troubleshooting.md
       - Testing Notes: testing-notes.md
-  - Deployment Guide: deployment.md
+  - Development Setup: deployment.md
 
 markdown_extensions:
   - admonition
