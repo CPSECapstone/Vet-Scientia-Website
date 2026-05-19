@@ -5,3 +5,7 @@ Vet Scientia is a web-based veterinary simulation platform for practicing clinic
 ![A veterinary anesthesia training scenario](assets/cover_image.jpg){ .home-hero-image }
 
 Use the navigation above to open the user guide, deployment guide, troubleshooting notes, or role-specific documentation.
+
+[Link to Deployment](https://gray-bush-0c1bf981e.6.azurestaticapps.net/){ target="_blank" rel="noopener" }.
+
+
